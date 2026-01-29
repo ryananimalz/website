@@ -110,6 +110,20 @@ nav {
   margin: 1em 0 3em;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.site-nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  margin-left: auto;
+}
+
 #notes-entry-container {
   display: grid;
   grid-gap: 2em;
