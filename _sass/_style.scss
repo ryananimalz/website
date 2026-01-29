@@ -46,6 +46,79 @@ img {
   border-radius: $border-radius;
 }
 
+.photograph {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.photograph img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 2rem auto;
+}
+
+.photography-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.photography-preview img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: $border-radius;
+}
+
+.photography-meta p {
+  margin: 0 0 0.35rem;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-list-item {
+  margin-bottom: 0.75rem;
+}
+
+.note-title {
+  display: inline-block;
+  border-bottom: none;
+}
+
+.note-title:hover {
+  color: $color-primary;
+}
+
+.note-date {
+  font-size: 0.85em;
+  color: $color-subtext;
+}
+
+content .note-list a.internal-link {
+  background: transparent;
+  border-bottom: none;
+}
+
+content .note-list a.internal-link:hover {
+  background: transparent;
+}
+
+content .note-list-item a.internal-link {
+  background: transparent;
+  border-bottom: none;
+}
+
+content .note-list-item a.internal-link:hover {
+  background: transparent;
+}
+
 blockquote {
   padding: 1.5em;
   margin: 0;
@@ -108,6 +181,19 @@ a {
 
 nav {
   margin: 1em 0 3em;
+}
+
+.home-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.home-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .site-nav {

@@ -1,5 +1,6 @@
 ---
 title: Never outsource understanding
+publish_date: 2025-07-26
 ---
 It's easy to generate summaries of articles, essays and research papers in a couple of clicks.
 

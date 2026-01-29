@@ -1,5 +1,6 @@
 ---
 title: Collect failure
+publish_date: 2025-02-18
 ---
 It's easier to become great at something by collecting failures than it is by trying to collect successes.
 

@@ -1,5 +1,6 @@
 ---
 title: Buy books liberally
+publish_date: 2024-12-06
 ---
 I'm a huge cheapskate but I allow myself total, reckless freedom to purchase books. I buy any book that seems interesting, any book that challenges a deeply-held belief, and any book that is mentioned by someone I respect.
 

@@ -1,5 +1,6 @@
 ---
 title: Be your own harshest critic
+publish_date: 2025-06-10
 ---
 As a writer, you have to be our own harshest critic.
 

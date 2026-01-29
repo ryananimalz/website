@@ -1,5 +1,6 @@
 ---
 title: Weasel words
+publish_date: 2024-05-24
 ---
 
 ---

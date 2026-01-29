@@ -1,5 +1,6 @@
 ---
 title: Marketing is repetition
+publish_date: 2025-08-10
 ---
 Good ideas are hard to find, and most marketing channels are extremely lossy: most people will not see what you share, and those that do will forget it very quickly.
 

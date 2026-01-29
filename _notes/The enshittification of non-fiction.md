@@ -1,5 +1,6 @@
 ---
 title: The enshittification of non-fiction
+publish_date: 2026-01-29
 ---
 
 ---

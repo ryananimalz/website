@@ -1,5 +1,6 @@
 ---
 title: Get great with bad gear
+publish_date: 2025-07-01
 ---
 I learned to play guitar on a hunk of plywood with action high enough to fit a phone book between string and fretboard. I remember feeling embarrassed whenever I opened my gig bag at jam sessions, pulling out my eBay-caster with the sanded-off brand name ("Maxine"), surrounded as I was by wealthy middle-class bandmates with Fenders and Gibsons.
 
