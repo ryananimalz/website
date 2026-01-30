@@ -7,15 +7,15 @@ permalink: /
 
 # Recent 
 
-<p style="padding: 3em 1em; background: #262626; border-radius: 4px;">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
-</p>
+My personal corner of the internet, published directly from my Obsidian note vault. 
 
-Personal thoughts and reflections. For my writing and research on SEO and marketing, see the [Ahrefs blog](https://ahrefs.com/blog/).
+Learn [[how this website was built]] or see my [[about]] page.
+
+
 
 <div class="home-columns">
   <section class="home-column">
-    <strong>Recent writing</strong>
+    <h3>Recent writing</h3>
 
     <ul class="note-list">
       {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
@@ -29,7 +29,7 @@ Personal thoughts and reflections. For my writing and research on SEO and market
   </section>
 
   <section class="home-column">
-    <strong>Recent photography</strong>
+    <h3>Recent photography</h3>
 
     {% assign recent_photos = site.photography | sort: "date" | reverse %}
     {% for photo in recent_photos limit: 3 %}
