@@ -1,6 +1,6 @@
 ---
 title: Rushmere
-date: 2024-01-29
+date: 2021-12-12
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/8388a4f5-6452-4587-839e-ffa171bc7b11/DSC05074.jpg
 ---
 Taken at Rushmere Country Park near Leighton Buzzard. Most striking about the park are the conifers, bright orange trunks topped with pillowy green foliage. There's an old boathouse in a stretch of river that catches my eye every time we visit.

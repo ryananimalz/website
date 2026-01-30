@@ -1,6 +1,6 @@
 ---
 title: The Ridgeway
-date: 2024-10-22
+date: 2022-10-22
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/e7ea3f74-9aff-4c59-bf90-acf176f6aeda/DSC06879-Enhanced-NR.jpg
 ---
 ![](https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/e7ea3f74-9aff-4c59-bf90-acf176f6aeda/DSC06879-Enhanced-NR.jpg)
