@@ -47,9 +47,3 @@ Learn [[how this website was built]] or see my [[about]] page.
     {% endfor %}
   </section>
 </div>
-
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-</style>

@@ -1,8 +1,25 @@
 <div class="site-nav">
   <a class="internal-link" href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
-  <div class="site-nav-links">
-    <a class="internal-link" href="{{ site.baseurl }}/writing">Writing</a>
-    <a class="internal-link" href="{{ site.baseurl }}/photography">Photography</a>
-    <a class="internal-link" href="{{ site.baseurl }}/about">About</a>
-  </div>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle">
+  <label class="nav-toggle-label" for="nav-toggle">
+    <span class="nav-toggle-text">Menu</span>
+    <span class="nav-toggle-icon" aria-hidden="true"></span>
+  </label>
+  <ul class="site-nav-links">
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/">Home</a>
+    </li>
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/writing">Writing</a>
+    </li>
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/photography">Photography</a>
+    </li>
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/about">About</a>
+    </li>
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/LBOW">LBOW</a>
+    </li>
+  </ul>
 </div>

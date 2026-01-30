@@ -11,18 +11,44 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
 body {
   box-sizing: content-box;
   font-family: $font-family;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.7;
-  padding: 4vh 6vw;
+  padding: 0;
   overflow-x: hidden;
   color: $color-text;
   font-size: 1rem;
-  max-width: 63em;
   background-color: $color-background;
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
   }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 2rem;
+  align-items: start;
+  max-width: 63em;
+  margin: 0 auto;
+  padding: 4vh 6vw;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
+.sidebar-nav {
+  position: sticky;
+  top: 4vh;
+  align-self: start;
+  font-size: 0.9rem;
+}
+
+.sidebar-nav nav {
+  margin: 0;
 }
 
 time {
@@ -198,16 +224,94 @@ nav {
 
 .site-nav {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+  text-align: right;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5em;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  color: $color-subtext;
+}
+
+.nav-toggle-icon {
+  width: 1.4rem;
+  height: 0.1rem;
+  background: $color-border;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-border;
+}
+
+.nav-toggle-icon::before {
+  transform: translateY(-0.4rem);
+}
+
+.nav-toggle-icon::after {
+  transform: translateY(0.4rem);
 }
 
 .site-nav-links {
+  list-style: none;
   display: flex;
-  justify-content: flex-end;
-  gap: 1em;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35em;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .sidebar-nav {
+    position: static;
+    order: -1;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    align-items: flex-start;
+    gap: 0.75em;
+    text-align: left;
+  }
+
+  .nav-toggle-label {
+    display: inline-flex;
+  }
+
+  .site-nav-links {
+    display: none;
+    align-items: flex-start;
+    gap: 0.5em;
+    text-align: left;
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+
+  .nav-toggle:checked ~ .site-nav-links {
+    display: flex;
+  }
 }
 
 #notes-entry-container {
