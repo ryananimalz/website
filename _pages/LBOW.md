@@ -313,7 +313,18 @@ Kapost (2014 - 2015)
 
 - [Digital Marketing Expert vs ChatGPT: Who Will Win?](https://www.youtube.com/watch?v=QbBHLuxwc4I) (Ahrefs) ⭐
 - [Debunking 11 Common Digital Marketing Myths You Thought Were True](https://www.youtube.com/watch?v=hIE9ckHT2NE) (Ahrefs)
-    
+- [Blog Roast #1 — When to Make Your First Finance Hire](https://www.youtube.com/watch?v=6mrbEKuWPlQ)
+- [Blog Roast #2 — Content-driven growth](https://www.youtube.com/watch?v=vhjAhOuTaMw)
+- [Blog Roast #3 — Create a “Content Playground”](https://www.youtube.com/watch?v=K6wLc3QE2_c)
+- [Blog Roast #4 — Zero-Click Content](https://www.youtube.com/watch?v=zZEXuDqDpI8)
+- [Blog Roast #5 — Why Trello Failed](https://www.youtube.com/watch?v=OKCwSK4BEfo)
+- [Blog Roast #6 — The Star Wars Guide to Net Promoter Score](https://www.youtube.com/watch?v=n7Z-PyW4br8)
+- [Blog Roast #7 — I Blogged Every Night for a Week. It Went Terribly.](https://www.youtube.com/watch?v=1lXxBpPUIPA)
+- [Blog Roast #8 — Slack’s $25 Billion Dollar Secret Sauce](https://www.youtube.com/watch?v=4pjE3y0V5G4)
+- [Blog Roast #9 — Anatomy of a Content Refresh](https://www.youtube.com/watch?v=DBLc3WQj4z0)
+- [Blog Roast #10 — Rendering Queue: Google Needs 9× More Time To Crawl JS Than HTML](https://www.youtube.com/watch?v=uT9c6I6hU5o)
+- [Blog Roast #11 — A Day in the Life of a First Finance Hire](https://www.youtube.com/watch?v=X2jnv2Dz0q4)
+- [Blog Roast #12 — Teardowns, Dynamic Content, Insane UX](https://www.youtube.com/watch?v=n7Z-PyW4br8)
 
 ### **Talks and Webinars**
 
