@@ -1,0 +1,32 @@
+---
+title: List of personal websites
+publish_date: 2026-01-30
+---
+This is a list of inspiring personal websites. Many of these websites are minimal and share my affinity for Markdown and plaintext:
+
+- [Stephan Ango](https://stephanango.com/)
+- [Jimmy Daly](https://www.jimmydaly.com/)
+- [Paul Graham](http://www.paulgraham.com/)
+- [Derek Sivers](https://sive.rs/)
+- [Yamina Pressler](https://yaminapressler.com/)
+- [Joschua Wuyts](https://notes.joschua.io/)
+- [Oliver Burkeman](https://ohgm.co.uk/)
+- [Tom Critchlow](https://tomcritchlow.com/wiki/)
+- [Seth Godin](https://seths.blog/)
+- [Karl Yang](https://karlyang.net/)
+- [Patrick Collison](https://patrickcollison.com/)
+- [Si Quan Ong](https://www.siquanong.com/)
+- [Herbert Lui](https://herbertlui.com/)
+- [Julian Shapiro](https://www.julian.com/)
+- [Shaan Puri](https://www.shaanpuri.com/)
+- [Shea Fitzpatrick](https://www.sheafitz.com/)
+- [Chris Hlad](https://chrishlad.com/)
+- [Om Malik (Photos)](https://www.photosbyom.com/)
+- [Om Malik](https://om.co/)
+- [Andrej Karpathy](https://karpathy.ai/)
+- [Will Larson](https://lethain.com/)
+- [Simon Sarris](https://simonsarris.com/)
+- [Myk Pono](https://www.mykpono.com/)
+- [Josh Pigford](https://joshpigford.com/)
+- [Sriram Krishnan](https://sriramk.com/)
+- [John Mueller](https://johnmu.com/)
