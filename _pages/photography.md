@@ -4,7 +4,7 @@ title: "Photography"
 permalink: /photography/
 ---
 
-{% assign sorted = site.photography | sort: "date" | reverse %}
+{% assign sorted = site.photography | sort: "publish_date" | reverse %}
 {% for photo in sorted %}
   <div class="photography-list-item">
     {% if photo.cover_image %}
@@ -14,7 +14,7 @@ permalink: /photography/
     {% endif %}
     <div class="photography-meta">
       <p><a href="{{ photo.url }}">{{ photo.title }}</a></p>
-      <p>{{ photo.date | date: "%B %Y" }}</p>
+      <p>{{ photo.publish_date | date: "%B %Y" }}</p>
     </div>
   </div>
 {% endfor %}

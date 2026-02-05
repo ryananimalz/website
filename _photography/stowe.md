@@ -1,6 +1,6 @@
 ---
 title: Stowe
-date: 2021-11-29
+publish_date: 2021-11-29
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/b44619d3-9e2d-4706-843f-fec87891b37d/DSC04758.jpg
 ---
 Stowe is a National Trust property just outside of Buckingham, famous for its grand house and carefully manicured landscape gardens.

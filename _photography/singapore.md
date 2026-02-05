@@ -1,6 +1,6 @@
 ---
 title: Singapore
-date: 2023-11-29
+publish_date: 2023-11-29
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/e5d068f7-0236-459c-af47-8665dfcbcd57/DSC07823.jpg
 ---
 I travelled to Singapore just after joining the Ahrefs crew. It's a surreal place, an Asian Canary Wharf, all high-tec chrome and glass in the middle of a sweltering tropical peninsula. Someone described the country as "Asia for dummies", which explains why I had such a great time.

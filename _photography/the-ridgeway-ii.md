@@ -1,6 +1,6 @@
 ---
 title: The Ridgeway II
-date: 2024-07-17
+publish_date: 2024-07-17
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/c1c2ccf9-cc02-4534-b630-71b75b59f7b4/DSC08490.jpg
 ---
 Photographs from hiking another stretch of The Ridgeway national trail, also known as "Britain's oldest road". This is the Chinnor to Wendover stretch, passing through some of my favourite places: [[Pulpit Hill]], the [[Grangelands reserve]], and Coombe Hill.

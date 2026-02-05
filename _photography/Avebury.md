@@ -1,6 +1,6 @@
 ---
 title: Avebury
-date: 2022-11-08
+publish_date: 2022-11-08
 cover_image: /assets/1-DSC06541.jpg
 ---
 Averbury's ancient stones mark the extreme Western end of the Ridgeway trail (see also [[the-ridgeway]] and [[the-ridgeway-ii]]). It hosted us for a stag, the day spent hiking and celebrating.

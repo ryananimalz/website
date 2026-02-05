@@ -1,6 +1,6 @@
 ---
 title: Brill
-date: 2024-08-20
+publish_date: 2024-08-20
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/d5199ba0-7c9b-4151-94d3-321db8d3dde0/DSC08573-4.jpg
 ---
 ![](https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/d5199ba0-7c9b-4151-94d3-321db8d3dde0/DSC08573-4.jpg)

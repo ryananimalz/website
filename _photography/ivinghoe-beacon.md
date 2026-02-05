@@ -1,6 +1,6 @@
 ---
 title: Ivinghoe Beacon
-date: 2022-01-05
+publish_date: 2022-01-05
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/3bf09379-5d4e-4a93-b710-8f4fbee28aab/DSC05553-4.jpg
 ---
 The beacon at Ivinghoe is the start (or end) of the Ridgeway National Trail, an 86-mile hike through the heart of the Chilterns and out Westward.

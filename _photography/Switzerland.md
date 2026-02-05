@@ -1,6 +1,6 @@
 ---
 title: Switzerland
-date: 2025-08-23
+publish_date: 2025-08-23
 cover_image: /assets/6-DSC09179.jpg
 published: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Grangelands Reserve
-date: 2022-12-12
+publish_date: 2022-12-12
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/502d1f96-187f-4bbf-b05a-f12afd9808e7/DSC07508.jpg
 ---
 Grangelands nature reserve forms the final stretch of a circular walk we love at Pulpit Hill in Princes Risborough.

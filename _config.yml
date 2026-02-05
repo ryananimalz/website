@@ -48,3 +48,5 @@ defaults:
       path: "_photography/**/*.md"
     values:
       layout: "photography"
+
+description: "The personal website of Ryan Law."
