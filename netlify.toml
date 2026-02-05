@@ -1,3 +1,9 @@
 [build]
   command = "bundle exec jekyll build --trace"
   publish = "_site"
+
+[[redirects]]
+  from = "https://lustrous-cassata-fdcb66.netlify.app/*"
+  to = "https://ryanlaw.me/:splat"
+  status = 301
+  force = true
