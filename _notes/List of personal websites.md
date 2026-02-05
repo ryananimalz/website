@@ -7,6 +7,8 @@ This is a list of inspiring personal websites. Many of these websites are minima
 - [Stephan Ango](https://stephanango.com/)
 - [Jimmy Daly](https://www.jimmydaly.com/)
 - [Paul Graham](http://www.paulgraham.com/)
+- [Simon Willison](https://simonwillison.net/)
+- [Wes Kao](https://www.weskao.com/)
 - [Derek Sivers](https://sive.rs/)
 - [Yamina Pressler](https://yaminapressler.com/)
 - [Joschua Wuyts](https://notes.joschua.io/)
