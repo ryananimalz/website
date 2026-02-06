@@ -114,7 +114,7 @@ img {
 
 .note-title {
   display: inline-block;
-  border-bottom: none;
+  border-bottom: 1px solid $color-border;
 }
 
 .note-title:hover {
@@ -126,20 +126,19 @@ img {
   color: $color-subtext;
 }
 
-content .note-list a.internal-link {
-  background: transparent;
-  border-bottom: none;
+.see-all-link {
+  font-size: 0.7em;
+  font-weight: normal;
+  margin-left: 0.6em;
 }
 
-content .note-list a.internal-link:hover {
-  background: transparent;
-}
-
+content .note-list a.internal-link,
 content .note-list-item a.internal-link {
   background: transparent;
-  border-bottom: none;
+  border-bottom: 1px solid $color-border;
 }
 
+content .note-list a.internal-link:hover,
 content .note-list-item a.internal-link:hover {
   background: transparent;
 }

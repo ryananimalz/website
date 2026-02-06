@@ -4,18 +4,15 @@ title: Home
 id: home
 permalink: /
 ---
-
 # Recent 
 
-My personal corner of the internet, published directly from my Obsidian note vault. 
-
-Learn [[how this website was built]] or see my [[about]] page.
+Hi! I'm Ryan Law. This is my personal corner of the internet, published directly from my Obsidian note vault. Learn [[how this website was built]] or see my [[about]] page.
 
 
 
 <div class="home-columns">
   <section class="home-column">
-    <h3>Recent writing</h3>
+    <h3>Recent writing <a class="see-all-link" href="/writing/">See all</a></h3>
 
     <ul class="note-list">
       {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
@@ -29,7 +26,7 @@ Learn [[how this website was built]] or see my [[about]] page.
   </section>
 
   <section class="home-column">
-    <h3>Recent photography</h3>
+    <h3>Recent photography <a class="see-all-link" href="/photography/">See all</a></h3>
 
     {% assign recent_photos = site.photography | sort: "publish_date" | reverse %}
     {% for photo in recent_photos limit: 3 %}

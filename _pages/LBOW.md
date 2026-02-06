@@ -4,13 +4,14 @@ title: LBOW
 permalink: lbow
 ---
 # LBOW
-Inspired by [Andy Crestodina](https://www.linkedin.com/posts/andycrestodina_one-trick-for-staying-motivated-and-organized-activity-7072175795309350912-T-8b/), this is running list of my podcast appearances, webinars and talks, popular tweetstorms, and bylined articles (excluding many hundreds of ghostwritten articles for customers).
+Inspired by [Andy Crestodina](https://www.linkedin.com/posts/andycrestodina_one-trick-for-staying-motivated-and-organized-activity-7072175795309350912-T-8b/), this is a running list of my podcast appearances, webinars, talks, videos, and bylined articles (excluding many hundreds of ghostwritten articles for customers). (LBOW stands for *lifetime body of work*.)
 
 This page is curated for personal use, but you may find the most recent links helpful too.
 
 ## Articles
 Ahrefs (2023 - present)
 
+- [Update: AI Overviews Reduce Clicks by 58%](https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/)
 - [What AI Means for SEO](https://ahrefs.com/blog/what-ai-means-for-seo/ "Permanent Link to What AI Means for SEO")
 - [What Triggers AI Overviews? 86 Factors and 146 Million SERPs Analyzed](https://ahrefs.com/blog/ai-overview-triggers/ "Permanent Link to What Triggers AI Overviews? 86 Factors and 146 Million SERPs Analyzed")
 - [96.98% of Clicks Happen in the Top 10 Search Results](https://ahrefs.com/blog/almost-all-clicks-happen-in-the-top-10-results/ "Permanent Link to 96.98% of Clicks Happen in the Top 10 Search Results")

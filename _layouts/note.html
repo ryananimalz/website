@@ -15,8 +15,14 @@ layout: default
     <content>
       {{ content }}
       <br>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/thinkingslow/">LinkedIn</a> and <a href="https://x.com/thinking_slow">X</a>.</p>
-      <br>
+      {% assign recent_notes = site.notes | sort: "publish_date" | reverse %}
+      <hr>
+      <p><b>You might also like:</b></p>
+      <ul class="note-list">
+        {% for note in recent_notes limit: 3 %}
+          <li><a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></li>
+        {% endfor %}
+      </ul>
     </content>
 
     {% if page.backlinks.size > 0 %}
