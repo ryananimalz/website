@@ -8,12 +8,12 @@ permalink: /photography/
 {% for photo in sorted %}
   <div class="photography-list-item">
     {% if photo.cover_image %}
-      <a href="{{ photo.url }}" class="photography-preview">
+      <a href="{{ photo.url }}" class="photography-preview internal-link">
         <img src="{{ photo.cover_image }}" alt="{{ photo.title }} preview" loading="lazy">
       </a>
     {% endif %}
     <div class="photography-meta">
-      <p><a href="{{ photo.url }}">{{ photo.title }}</a></p>
+      <p><a class="internal-link" href="{{ photo.url }}">{{ photo.title }}</a></p>
       <p>{{ photo.publish_date | date: "%B %Y" }}</p>
     </div>
   </div>
