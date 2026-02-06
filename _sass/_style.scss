@@ -132,6 +132,25 @@ img {
   margin-left: 0.6em;
 }
 
+.note-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  font-size: 0.9em;
+}
+
+.note-nav-link {
+  color: $color-subtext;
+  border-bottom: 1px solid transparent;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.note-nav-link:hover {
+  color: $color-primary;
+  border-bottom-color: $color-border;
+}
+
 content .note-list a.internal-link,
 content .note-list-item a.internal-link {
   background: transparent;

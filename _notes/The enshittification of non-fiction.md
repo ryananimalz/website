@@ -4,7 +4,7 @@ publish_date: 2026-01-29
 ---
 
 ---
-I read [[Clear Thinking]] by Shane Parrish and was reminded that most modern non-fiction books have been [[enshittified]] to the point of rendering them useless. I suspect this will worsen as AI further lowers the barriers to creating books and promotes generic and homogenous writing style.
+I read Clear Thinking by Shane Parrish and was reminded that most modern non-fiction books have been enshittified to the point of rendering them useless. I suspect this will worsen as AI further lowers the barriers to creating books and promotes generic and homogenous writing style.
 
 Here are some recurring characteristic of modern (enshittified) non-fiction:
 
@@ -15,7 +15,7 @@ Here are some recurring characteristic of modern (enshittified) non-fiction:
 
 This is probably a product of big publishing houses having margins squeezed and needing every book to cater to the broadest possible audience. But it is still possible to find books that avoid this trap.
 
-[[Nassim Taleb]] is the most obvious example. He makes a point of only writing what he wants to read, eschewing convention in favour of writing only the interesting parts, in as much depth and complexity as he deems necessary. He also famously ignores editing input, and while not every author has the leverage to achieve this, the popularity of Taleb's books, with all of their colour and technicality and idiosyncrasies, proves that unconventional sells.
+Nassim Taleb is the most obvious example. He makes a point of only writing what he wants to read, eschewing convention in favour of writing only the interesting parts, in as much depth and complexity as he deems necessary. He also famously ignores editing input, and while not every author has the leverage to achieve this, the popularity of Taleb's books, with all of their colour and technicality and idiosyncrasies, proves that unconventional sells.
 
 I'm also reminded of [[Finite and Infinite Games]], a legendary and completely alien book that resembles nothing else I have ever read. It makes no sense through the lens of modern pop non-fiction, but I have thought about it for years since reading.
 

@@ -14,7 +14,30 @@ layout: default
   <div id="notes-entry-container">
     <content>
       {{ content }}
-      <br>
+
+      {% assign sorted_notes = site.notes | sort: "publish_date" %}
+      {% assign current_index = nil %}
+      {% for note in sorted_notes %}
+        {% if note.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if current_index != nil %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign next_index = current_index | plus: 1 %}
+        <nav class="note-nav">
+          {% if prev_index >= 0 %}
+            {% assign prev_note = sorted_notes[prev_index] %}
+            <a class="note-nav-link internal-link" href="{{ prev_note.url }}">← {{ prev_note.title }}</a>
+          {% endif %}
+          {% if next_index < sorted_notes.size %}
+            {% assign next_note = sorted_notes[next_index] %}
+            <a class="note-nav-link internal-link" href="{{ next_note.url }}">{{ next_note.title }} →</a>
+          {% endif %}
+        </nav>
+      {% endif %}
+      <!-- <br>
       {% assign recent_notes = site.notes | sort: "publish_date" | reverse %}
       <hr>
       <p><b>You might also like:</b></p>
@@ -22,7 +45,7 @@ layout: default
         {% for note in recent_notes limit: 3 %}
           <li><a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></li>
         {% endfor %}
-      </ul>
+      </ul> -->
     </content>
 
     {% if page.backlinks.size > 0 %}
@@ -40,9 +63,6 @@ layout: default
     {% endif %}
   </div>
 </article>
-
-<hr>
-
 <!-- <p>Here are all the notes in this garden, along with their links, visualized as a graph.</p> -->
 
 <!-- {% include notes_graph.html %} -->

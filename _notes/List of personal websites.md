@@ -32,3 +32,5 @@ This is a list of inspiring personal websites. Many of these websites are minima
 - [Josh Pigford](https://joshpigford.com/)
 - [Sriram Krishnan](https://sriramk.com/)
 - [John Mueller](https://johnmu.com/)
+- [Emmanuel Quartey](https://www.quartey.com/)
+- [Brian Lovin](https://brianlovin.com/)
