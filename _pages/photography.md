@@ -3,6 +3,9 @@ layout: page
 title: "Photography"
 permalink: /photography/
 ---
+# Photography
+
+I like to hike and take photographs along the way. Most of these photos are taken in the Chiltern hills, particularly the Ridgeway Trail, one of Britain's oldest paths. I shoot on an old Sony a6000 with kit lenses. 
 
 {% assign sorted = site.photography | sort: "publish_date" | reverse %}
 {% for photo in sorted %}
