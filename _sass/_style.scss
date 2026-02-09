@@ -1,12 +1,69 @@
-$color-background: hsl(0, 0%, 10%);
-$color-primary: hsl(0, 0%, 90%);
-$color-text: hsl(0, 0%, 85%);
-$color-subtext: hsl(0, 0%, 70%);
-$color-border: hsl(0, 0%, 30%);
-$color-box-background: hsl(0, 0%, 15%);
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+:root {
+  /* original light theme */
+  --color-background: hsl(0, 0%, 100%);
+  --color-primary: hsl(0, 0%, 10%);
+  --color-text: hsl(0, 0%, 20%);
+  --color-subtext: hsl(0, 0%, 30%);
+  --color-border: hsl(0, 0%, 85%);
+  --color-box-background: hsl(0, 0%, 96%);
+  --color-hover-bg: #fffaf1;
+  --color-hover-text: #000000;
+  --color-focus-bg: #dbeafe;
+  --color-focus-text: #0f172a;
+  --color-link-arrow: #aaaaaa;
+  --color-inline-code-background: #f5f5f5;
+  --color-invalid-link: #444444;
+  --color-invalid-link-background: #fafafa;
+  --color-invalid-link-brackets: #cccccc;
+  --color-code-block-background: hsl(0, 0%, 96%);
+  --color-internal-link-preview-border: #8b88e6;
+  --color-internal-link-preview-background: #efefff;
+  --color-tooltip-background: #ffffff;
+  --color-tooltip-border: #dddddd;
+  --color-tooltip-text: hsl(0, 0%, 20%);
+  --color-tooltip-shadow: rgba(0, 0, 0, 0.1);
+  --color-tooltip-fade-to: rgba(255, 255, 255, 1);
+  --color-theme-toggle-background: #f3f4f6;
+  --color-theme-toggle-text: #111827;
+  --color-theme-toggle-border: #d1d5db;
+  --color-theme-toggle-hover-background: #e5e7eb;
+  --color-theme-toggle-hover-text: #111827;
+}
+
+html[data-theme="dark"] {
+  --color-background: hsl(0, 0%, 10%);
+  --color-primary: hsl(0, 0%, 90%);
+  --color-text: hsl(0, 0%, 85%);
+  --color-subtext: hsl(0, 0%, 70%);
+  --color-border: hsl(0, 0%, 30%);
+  --color-box-background: hsl(0, 0%, 15%);
+  --color-hover-bg: hsl(0, 0%, 25%);
+  --color-hover-text: #ffffff;
+  --color-focus-bg: #1e293b;
+  --color-focus-text: #f8fafc;
+  --color-link-arrow: hsl(0, 0%, 70%);
+  --color-inline-code-background: hsl(0, 0%, 20%);
+  --color-invalid-link: hsl(0, 0%, 70%);
+  --color-invalid-link-background: hsl(0, 0%, 15%);
+  --color-invalid-link-brackets: hsl(0, 0%, 40%);
+  --color-code-block-background: hsl(0, 0%, 15%);
+  --color-internal-link-preview-border: #6b68c6;
+  --color-internal-link-preview-background: hsl(0, 0%, 20%);
+  --color-tooltip-background: hsl(0, 0%, 15%);
+  --color-tooltip-border: hsl(0, 0%, 30%);
+  --color-tooltip-text: hsl(0, 0%, 85%);
+  --color-tooltip-shadow: rgba(0, 0, 0, 0.4);
+  --color-tooltip-fade-to: rgba(26, 26, 26, 1);
+  --color-theme-toggle-background: #1f2937;
+  --color-theme-toggle-text: #f9fafb;
+  --color-theme-toggle-border: #374151;
+  --color-theme-toggle-hover-background: #334155;
+  --color-theme-toggle-hover-text: #f9fafb;
+}
 
 body {
   box-sizing: content-box;
@@ -15,9 +72,9 @@ body {
   line-height: 1.7;
   padding: 0;
   overflow-x: hidden;
-  color: $color-text;
+  color: var(--color-text);
   font-size: 1rem;
-  background-color: $color-background;
+  background-color: var(--color-background);
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
@@ -53,14 +110,14 @@ body {
 
 time {
   display: block;
-  color: $color-subtext;
+  color: var(--color-subtext);
   margin: 0.5em 0 1em;
 }
 
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: $color-subtext;
+  color: var(--color-subtext);
   padding-top: 1em;
 }
 
@@ -114,16 +171,16 @@ img {
 
 .note-title {
   display: inline-block;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .note-title:hover {
-  color: $color-primary;
+  color: var(--color-primary);
 }
 
 .note-date {
   font-size: 0.85em;
-  color: $color-subtext;
+  color: var(--color-subtext);
 }
 
 .see-all-link {
@@ -141,20 +198,20 @@ img {
 }
 
 .note-nav-link {
-  color: $color-subtext;
+  color: var(--color-subtext);
   border-bottom: 1px solid transparent;
   transition: color 200ms ease, border-color 200ms ease;
 }
 
 .note-nav-link:hover {
-  color: $color-primary;
-  border-bottom-color: $color-border;
+  color: var(--color-primary);
+  border-bottom-color: var(--color-border);
 }
 
 content .note-list a.internal-link,
 content .note-list-item a.internal-link {
   background: transparent;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--color-border);
 }
 
 content .note-list a.internal-link:hover,
@@ -166,7 +223,7 @@ blockquote {
   padding: 1.5em;
   margin: 0;
   font-size: 0.88em;
-  background: $color-box-background;
+  background: var(--color-box-background);
   border-radius: $border-radius;
 
   p {
@@ -179,7 +236,7 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.5em 0;
-  background: $color-border;
+  background: var(--color-border);
 }
 
 h1,
@@ -197,18 +254,18 @@ a {
   transition: background 300ms;
   padding: 0 0.1em;
   text-decoration: none;
-  border-bottom: 1px solid $color-border;
-  color: $color-primary;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary);
   &:hover {
-    color: white !important;
-    background: hsl(0, 0%, 25%);
+    color: var(--color-hover-text) !important;
+    background: var(--color-hover-bg);
   }
   &:after {
     position: relative;
     top: -0.5em;
     font-size: 0.7em;
     content: "↗";
-    color: $color-subtext;
+    color: var(--color-link-arrow);
   }
   &.internal-link:after,
   &.footnote:after,
@@ -218,8 +275,8 @@ a {
 }
 
 *:focus {
-  background: hsl(40, 50%, 25%) !important;
-  color: white !important;
+  background: var(--color-focus-bg) !important;
+  color: var(--color-focus-text) !important;
 }
 
 nav {
@@ -259,13 +316,13 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
-  color: $color-subtext;
+  color: var(--color-subtext);
 }
 
 .nav-toggle-icon {
   width: 1.4rem;
   height: 0.1rem;
-  background: $color-border;
+  background: var(--color-border);
   display: inline-block;
   position: relative;
 }
@@ -277,7 +334,25 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: $color-border;
+  background: var(--color-border);
+}
+
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--color-theme-toggle-border);
+  background: var(--color-theme-toggle-background);
+  color: var(--color-theme-toggle-text);
+  border-radius: $border-radius;
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-theme-toggle-hover-background);
+  color: var(--color-theme-toggle-hover-text);
 }
 
 .nav-toggle-icon::before {
@@ -345,26 +420,26 @@ nav {
 }
 
 .backlink-box {
-  background: $color-box-background;
+  background: var(--color-box-background);
   padding: 1em;
   border-radius: $border-radius;
 }
 
 code {
-  background: hsl(0, 0%, 20%);
+  background: var(--color-inline-code-background);
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
 
 .invalid-link {
-  color: $color-subtext;
+  color: var(--color-invalid-link);
   cursor: help;
-  background: $color-box-background;
+  background: var(--color-invalid-link-background);
   padding: 0 0.1em;
 }
 
 .invalid-link-brackets {
-  color: hsl(0, 0%, 40%);
+  color: var(--color-invalid-link-brackets);
   cursor: help;
 }
 
