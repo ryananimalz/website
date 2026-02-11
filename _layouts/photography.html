@@ -13,5 +13,80 @@ layout: default
 
   <content>
     {{ content }}
+
+    {% assign sorted_photography = site.photography | sort: "publish_date" | reverse %}
+    {% assign current_index = nil %}
+    {% for photo in sorted_photography %}
+      {% if photo.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    {% if current_index != nil %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      <nav class="note-nav">
+        {% if prev_index >= 0 %}
+          {% assign prev_photo = sorted_photography[prev_index] %}
+          <a class="note-nav-link internal-link" href="{{ prev_photo.url }}">← {{ prev_photo.title }}</a>
+        {% endif %}
+        {% if next_index < sorted_photography.size %}
+          {% assign next_photo = sorted_photography[next_index] %}
+          <a class="note-nav-link internal-link" href="{{ next_photo.url }}">{{ next_photo.title }} →</a>
+        {% endif %}
+      </nav>
+    {% endif %}
   </content>
 </article>
+
+<div class="lightbox" id="photo-lightbox" aria-hidden="true" role="dialog" aria-label="Image lightbox">
+  <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+  <img class="lightbox-image" src="" alt="">
+</div>
+
+<script>
+  (function() {
+    var photograph = document.querySelector('.photograph');
+    var lightbox = document.getElementById('photo-lightbox');
+    if (!photograph || !lightbox) return;
+
+    var lightboxImage = lightbox.querySelector('.lightbox-image');
+    var closeButton = lightbox.querySelector('.lightbox-close');
+
+    function openLightbox(image) {
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      lightboxImage.alt = '';
+      document.body.classList.remove('lightbox-open');
+    }
+
+    photograph.addEventListener('click', function(event) {
+      var clickedImage = event.target.closest('content img');
+      if (!clickedImage) return;
+      openLightbox(clickedImage);
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', function(event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>

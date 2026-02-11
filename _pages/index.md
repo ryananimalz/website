@@ -12,7 +12,7 @@ Hi! I'm Ryan Law. This is my personal corner of the internet, published directly
 
 <div class="home-columns">
   <section class="home-column">
-    <h3>Recent writing <a class="see-all-link" href="/writing/">See all</a></h3>
+    <h3>Recent writing <a class="see-all-link internal-link" href="/writing/">See all</a></h3>
 
     <ul class="note-list">
       {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
@@ -26,7 +26,7 @@ Hi! I'm Ryan Law. This is my personal corner of the internet, published directly
   </section>
 
   <section class="home-column">
-    <h3>Recent photography <a class="see-all-link" href="/photography/">See all</a></h3>
+    <h3>Recent photography <a class="see-all-link internal-link" href="/photography/">See all</a></h3>
 
     {% assign recent_photos = site.photography | sort: "publish_date" | reverse %}
     {% for photo in recent_photos limit: 3 %}
@@ -38,7 +38,7 @@ Hi! I'm Ryan Law. This is my personal corner of the internet, published directly
         {% endif %}
         <div class="photography-meta">
           <p><a class="internal-link" href="{{ photo.url }}">{{ photo.title }}</a></p>
-          <p>{{ photo.publish_date | date: "%B %Y" }}</p>
+          <p class="note-date">{{ photo.publish_date | date: "%B %Y" }}</p>
         </div>
       </div>
     {% endfor %}

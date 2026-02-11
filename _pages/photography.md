@@ -7,6 +7,8 @@ permalink: /photography/
 
 I like to hike and take photographs along the way. Most of these photos are taken in the Chiltern hills, particularly the Ridgeway Trail, one of Britain's oldest paths. I shoot on an old Sony a6000 with kit lenses (see my belief: [[Get great with bad gear]]).
 
+(Try these pages in light mode.)
+
 {% assign sorted = site.photography | sort: "publish_date" | reverse %}
 {% for photo in sorted %}
   <div class="photography-list-item">
@@ -17,7 +19,7 @@ I like to hike and take photographs along the way. Most of these photos are take
     {% endif %}
     <div class="photography-meta">
       <p><a class="internal-link" href="{{ photo.url }}">{{ photo.title }}</a></p>
-      <p>{{ photo.publish_date | date: "%B %Y" }}</p>
+      <p class="note-date">{{ photo.publish_date | date: "%B %Y" }}</p>
     </div>
   </div>
 {% endfor %}
