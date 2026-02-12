@@ -7,14 +7,12 @@ permalink: /books
 
 I’m the author of two novels about the end of the world. If you’re a fan of science fiction, fantasy or post-apocalyptic fiction, you might enjoy _The Green Priest_ and its sequel, _The Death-Marked Pilgrim_. [Available now at Amazon](https://www.amazon.com/Green-Priest-Book-Rainmaker-Writings-ebook/dp/B081LHQHNJ/).
 
-| Book one | Book two |
-| :-- | :-- |
-| ![]({{ site.baseurl }}/assets/the-green-priest-EBOOK-FRONT-WEB-V02+cropped.webp) | ![]({{ site.baseurl }}/assets/The-Death-Marked-Pilgrim-EBOOK-FRONT-WEB.webp) |
-
 <br>
+
 ## The Green Priest
 [Amazon.com](https://www.amazon.com/Green-Priest-Book-Rainmaker-Writings-ebook/dp/B081LHQHNJ/) | [Amazon.co.uk](https://www.amazon.co.uk/Green-Priest-Book-Rainmaker-Writings-ebook/dp/B081LHQHNJ/)
 
+<img src="/assets/the-green-priest-EBOOK-FRONT-HR-V02.jpg" alt="The Green Priest" width="200" style="float: right; margin-left: 20px;">
 **It has rained for centuries, and the sprawling cities of the Elders have drowned beneath the floodwaters.**  
   
 The survivors of Shelter, a hollowed-out mountain-side refuge, eke out a simple existence amidst the flooded, overgrown ruins of a forgotten civilisation.  
@@ -28,6 +26,7 @@ When a young hunter called Halvar discovers a curious artefact of the ancients, 
 ## The Death-Marked Pilgrim
 [Amazon.com](https://www.amazon.com/dp/B09NDPN8TM/) | [Amazon.co.uk](https://www.amazon.co.uk/dp/B09NDPN8TM/)
 
+<img src="/assets/The-Death-Marked-Pilgrim-EBOOK-FRONT-WEB.jpg" alt="The Death-Marked Pilgrim" width="200" style="float: right; margin-left: 20px;">
 **The salt-rimed streets of Cairn sit in shadow.** 
 
 From an ancient church, battered by storms and weathered by the centuries, the Green Priests shape the ruined town to their image.
