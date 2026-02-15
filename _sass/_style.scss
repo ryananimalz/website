@@ -40,24 +40,24 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
 }
 
 html[data-theme="dark"] {
-  --color-background: #100f0f;
-  --color-primary: #fffcf0;
-  --color-text: #cecdc3;
+  --color-background: #171615;
+  --color-primary: #cecdc3;
+  --color-text: #b7b5ac;
   --color-subtext: #878580;
   --color-border: #403e3c;
   --color-box-background: #1c1b1a;
   --color-hover-bg: #343331;
-  --color-hover-text: #fffcf0;
+  --color-hover-text: #f2f0e5;
   --color-focus-bg: #133051;
-  --color-focus-text: #e1eceb;
+  --color-focus-text: #cecdc3;
   --color-link-arrow: #878580;
   --color-inline-code-background: #282726;
   --color-invalid-link: #878580;
   --color-invalid-link-background: #1c1b1a;
   --color-invalid-link-brackets: #575653;
   --color-code-block-background: #282726;
-  --color-internal-link-preview-border: #66a0c8;
-  --color-internal-link-preview-background: #12253b;
+  --color-internal-link-preview-border: #5f7f88;
+  --color-internal-link-preview-background: #243238;
   --color-tooltip-background: #1c1b1a;
   --color-tooltip-border: #403e3c;
   --color-tooltip-text: #cecdc3;
@@ -71,7 +71,7 @@ html[data-theme="dark"] {
   --color-lightbox-background: rgba(16, 15, 15, 0.9);
   --color-lightbox-close-border: rgba(255, 252, 240, 0.45);
   --color-lightbox-close-background: rgba(16, 15, 15, 0.4);
-  --color-lightbox-close-text: #fffcf0;
+  --color-lightbox-close-text: #f2f0e5;
   --color-lightbox-close-hover-background: rgba(255, 252, 240, 0.2);
 }
 
