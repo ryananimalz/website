@@ -15,25 +15,25 @@ layout: default
 
       {{ content }}
 
-      {% assign sorted_notes = site.notes | sort: "publish_date" %}
+      {% assign chron_notes = site.notes | sort: "publish_date" %}
       {% assign current_index = nil %}
-      {% for note in sorted_notes %}
+      {% for note in chron_notes %}
         {% if note.url == page.url %}
           {% assign current_index = forloop.index0 %}
         {% endif %}
       {% endfor %}
 
       {% if current_index != nil %}
-        {% assign prev_index = current_index | minus: 1 %}
-        {% assign next_index = current_index | plus: 1 %}
+        {% assign older_index = current_index | minus: 1 %}
+        {% assign newer_index = current_index | plus: 1 %}
         <nav class="note-nav">
-          {% if prev_index >= 0 %}
-            {% assign prev_note = sorted_notes[prev_index] %}
-            <a class="note-nav-link internal-link" href="{{ prev_note.url }}">← {{ prev_note.title }}</a>
+          {% if older_index >= 0 %}
+            {% assign older_note = chron_notes[older_index] %}
+            <a class="note-nav-link note-nav-link--older internal-link" href="{{ older_note.url }}">← {{ older_note.title }}</a>
           {% endif %}
-          {% if next_index < sorted_notes.size %}
-            {% assign next_note = sorted_notes[next_index] %}
-            <a class="note-nav-link internal-link" href="{{ next_note.url }}">{{ next_note.title }} →</a>
+          {% if newer_index < chron_notes.size %}
+            {% assign newer_note = chron_notes[newer_index] %}
+            <a class="note-nav-link note-nav-link--newer internal-link" href="{{ newer_note.url }}">{{ newer_note.title }} →</a>
           {% endif %}
         </nav>
       {% endif %}

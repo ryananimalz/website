@@ -15,4 +15,4 @@ By grinding through long projects, you become better at scoping and defining fut
 
 You wind-up with something to show for your time, an artefact of your labours that can be handled, admired, and learned from. Even if it fell short of your expectations, it is likely to exceed the expectations of others. Few people ever finish things. Most live in a world of could-have-beens and maybe-one-days. You can be different.
 
-So ship the smallest functional unit, create fast feedback loops, and build a stubborn, pig-headed instinct to clear your plate before moving on to anything else.
+So ship the smallest functional unit, create [[Collect failure|fast feedback loops]], and build a stubborn, pig-headed instinct to clear your plate before moving on to anything else.

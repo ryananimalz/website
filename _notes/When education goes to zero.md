@@ -11,7 +11,7 @@ Nobody will put up with the friction imposed by content marketing. Searchers wil
 
 But here's the crux: marketing existed before this strange little loophole appeared, and marketing will exist after.
 
-The marketing strategies in ascendance today are not new or novel: events, branding, advertising, social. We are not abandoning the marketing playbook so much as cycling through it. Every marketing tactic is part of a cycle of adoption, saturation, and abandonment. Technology has accelerated this process, but the process has always existed.
+The marketing strategies in ascendance today are not new or novel: events, branding, advertising, social. We are not abandoning the marketing playbook so much as [[Marketing is repetition|cycling through it]]. Every marketing tactic is part of a cycle of adoption, saturation, and abandonment. Technology has accelerated this process, but the process has always existed.
 
 It's scary to see the dominant marketing strategy of the past decade shrivel and wither at such an alarming rate, but it shouldn't be unexpected. The law of shitty click-throughs always wins: when any tactic gets too popular, its returns start to diminish. LLMs have vastly accelerated this process, but in my opinion, we've been on the downslope of "educational blog content" for a while.
 

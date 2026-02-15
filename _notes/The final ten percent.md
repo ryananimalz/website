@@ -6,6 +6,6 @@ The new ideas and novel insights that characterize great writing can feel imposs
 
 Good ideas generally don't appear from the ether. They are riffs on existing ideas, refinements, responses, zooming in or zooming out. In almost all cases, 90% of the idea exists elsewhere—greatness is unlocked with the addition of the final 10%.
 
-So stop trying to conjure miracles and focus your energy on the collection and analysis of the existing ideas in your industry.
+So stop trying to conjure miracles and focus your energy on the [[Creativity is a muscle|collection and analysis of the existing ideas]] in your industry.
 
-Great writers are usually prolific observers, people who plumb the world's deepest recesses for information, absorbing and recording everything. They look for the commonalities between their observations, the macro view, the frameworks that sit atop the individual events—the final elusive 10% that makes the 90% more valuable.
+Great writers are usually prolific observers, people who plumb the world's deepest recesses for information, absorbing and recording everything. They look for the commonalities between their observations, the macro view, the frameworks that sit atop the individual events—the [[Creativity is a muscle|final elusive 10%]] that makes the 90% more valuable.

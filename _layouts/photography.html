@@ -14,25 +14,25 @@ layout: default
   <content>
     {{ content }}
 
-    {% assign sorted_photography = site.photography | sort: "publish_date" | reverse %}
+    {% assign chron_photography = site.photography | sort: "publish_date" %}
     {% assign current_index = nil %}
-    {% for photo in sorted_photography %}
+    {% for photo in chron_photography %}
       {% if photo.url == page.url %}
         {% assign current_index = forloop.index0 %}
       {% endif %}
     {% endfor %}
 
     {% if current_index != nil %}
-      {% assign prev_index = current_index | minus: 1 %}
-      {% assign next_index = current_index | plus: 1 %}
+      {% assign older_index = current_index | minus: 1 %}
+      {% assign newer_index = current_index | plus: 1 %}
       <nav class="note-nav">
-        {% if prev_index >= 0 %}
-          {% assign prev_photo = sorted_photography[prev_index] %}
-          <a class="note-nav-link internal-link" href="{{ prev_photo.url }}">← {{ prev_photo.title }}</a>
+        {% if older_index >= 0 %}
+          {% assign older_photo = chron_photography[older_index] %}
+          <a class="note-nav-link note-nav-link--older internal-link" href="{{ older_photo.url }}">← {{ older_photo.title }}</a>
         {% endif %}
-        {% if next_index < sorted_photography.size %}
-          {% assign next_photo = sorted_photography[next_index] %}
-          <a class="note-nav-link internal-link" href="{{ next_photo.url }}">{{ next_photo.title }} →</a>
+        {% if newer_index < chron_photography.size %}
+          {% assign newer_photo = chron_photography[newer_index] %}
+          <a class="note-nav-link note-nav-link--newer internal-link" href="{{ newer_photo.url }}">{{ newer_photo.title }} →</a>
         {% endif %}
       </nav>
     {% endif %}
@@ -40,8 +40,10 @@ layout: default
 </article>
 
 <div class="lightbox" id="photo-lightbox" aria-hidden="true" role="dialog" aria-label="Image lightbox">
+  <button class="lightbox-prev" type="button" aria-label="Previous image">←</button>
   <button class="lightbox-close" type="button" aria-label="Close image">×</button>
   <img class="lightbox-image" src="" alt="">
+  <button class="lightbox-next" type="button" aria-label="Next image">→</button>
 </div>
 
 <script>
@@ -50,12 +52,24 @@ layout: default
     var lightbox = document.getElementById('photo-lightbox');
     if (!photograph || !lightbox) return;
 
+    var contentImages = Array.prototype.slice.call(photograph.querySelectorAll('content img'));
     var lightboxImage = lightbox.querySelector('.lightbox-image');
     var closeButton = lightbox.querySelector('.lightbox-close');
+    var prevButton = lightbox.querySelector('.lightbox-prev');
+    var nextButton = lightbox.querySelector('.lightbox-next');
+    var currentIndex = -1;
 
-    function openLightbox(image) {
+    function showImage(index) {
+      if (!contentImages.length) return;
+      currentIndex = (index + contentImages.length) % contentImages.length;
+      var image = contentImages[currentIndex];
       lightboxImage.src = image.currentSrc || image.src;
       lightboxImage.alt = image.alt || '';
+    }
+
+    function openLightbox(image) {
+      var index = contentImages.indexOf(image);
+      showImage(index === -1 ? 0 : index);
       lightbox.classList.add('is-open');
       lightbox.setAttribute('aria-hidden', 'false');
       document.body.classList.add('lightbox-open');
@@ -76,6 +90,12 @@ layout: default
     });
 
     closeButton.addEventListener('click', closeLightbox);
+    prevButton.addEventListener('click', function() {
+      showImage(currentIndex - 1);
+    });
+    nextButton.addEventListener('click', function() {
+      showImage(currentIndex + 1);
+    });
 
     lightbox.addEventListener('click', function(event) {
       if (event.target === lightbox) {
@@ -84,8 +104,16 @@ layout: default
     });
 
     document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      if (!lightbox.classList.contains('is-open')) return;
+
+      if (event.key === 'Escape') {
         closeLightbox();
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showImage(currentIndex - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showImage(currentIndex + 1);
       }
     });
   })();

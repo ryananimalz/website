@@ -10,4 +10,4 @@ I like to think of them as _could_, _should_, and _did_:
 
 - Should: the writer is brave enough to voice an opinion (hooray!). They seem to have evaluated more than one methodology or idea, and performed a little synthesis to turn multiple ideas into a concrete recommendation. They seem willing to stand behind their recommendation (at least a little).
 
-- Did: rarest of all, the writer is willing to their own medicine and actually do the thing they talk about. They write from firsthand experience, either sharing past experience or testing their ideas through experimentation. Their writing is more than an academic exercise—they have skin in the game. This is the gold standard, and their advice is probably worth paying attention to.
+- Did: rarest of all, the writer is willing to their own medicine and actually do the thing they talk about. They [[Convincing case studies|write from firsthand experience]], either sharing past experience or testing their ideas through experimentation. Their writing is more than an academic exercise—they have skin in the game. This is the gold standard, and their advice is probably worth paying attention to.

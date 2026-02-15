@@ -7,7 +7,7 @@ Most writing and editing processes are focused on things that are _necessary but
 
 The absence of these can ruin a good post—but they alone can't _create_ quality.
 
-I think about this as "primacy of good ideas." A good idea can survive bad writing, but good writing can't make up for a bad idea.
+I think about this as "primacy of good ideas." A [[The final ten percent|good idea can survive bad writing]], but [[Weasel words|good writing can't make up for a bad idea]].
 
 If energy is to be expended anywhere in writing, it needs to be expended in _ideation_. Is this idea credible? Is there a more persuasive articulation? Is there an existing real-world concept we can anchor our argument in? What data can do we need to validate this viewpoint?
 

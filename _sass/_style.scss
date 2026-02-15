@@ -243,6 +243,38 @@ body.lightbox-open {
   background: var(--color-lightbox-close-hover-background);
 }
 
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-lightbox-close-border);
+  border-radius: 999px;
+  background: var(--color-lightbox-close-background);
+  color: var(--color-lightbox-close-text);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--color-lightbox-close-hover-background);
+}
+
 .photography-list-item {
   display: flex;
   align-items: flex-start;
@@ -518,12 +550,17 @@ nav {
     align-items: flex-start;
     gap: 0.5em;
     text-align: left;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
     column-gap: 1.5rem;
   }
 
+  .site-nav-links li {
+    break-inside: avoid;
+    margin-bottom: 0.5em;
+  }
+
   .nav-toggle:checked ~ .site-nav-links {
-    display: grid;
+    display: block;
   }
 }
 

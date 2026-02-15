@@ -43,7 +43,7 @@ Lastly, it's quick, dirty and extremely effective. It's an easy model for everyo
 
 The premortem resonated with me because it combines elements of three other fantastically powerful mental models:
 
-- [Steel-manning](https://en.wikipedia.org/wiki/Straw_man): we're creating the strongest possible argument for the failure of a given project—we're working on the assumption that it _actually has failed,_ and forcing ourselves to explain the failure. There is no get-out, no softball questions to answer.
+- [Steel-manning](https://en.wikipedia.org/wiki/Straw_man): we're creating the [[Be your own harshest critic|strongest possible argument for the failure]] of a given project—we're working on the assumption that it _actually has failed,_ and forcing ourselves to explain the failure. There is no get-out, no softball questions to answer.
     
 - [The Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle): the premortem lets you home in on the handful of problems (the 20%) that are likely to account for the majority of a project's risk (the 80%). It's a powerful heuristic that even the busiest of teams can adopt and benefit from.
     
