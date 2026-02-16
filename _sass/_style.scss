@@ -331,6 +331,55 @@ body.lightbox-open {
   font-size: 0.9em;
 }
 
+.note-actions {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.note-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.5em 0 1em;
+}
+
+.note-meta-row time {
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .note-meta-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.random-note-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-box-background);
+  color: var(--color-primary);
+  border-radius: $border-radius;
+  font: inherit;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+}
+
+.random-note-button:hover {
+  background: var(--color-hover-bg);
+  color: var(--color-hover-text);
+}
+
+.random-note-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .note-nav-link {
   color: var(--color-primary);
   border-bottom: 1px solid transparent;
