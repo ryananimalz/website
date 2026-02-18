@@ -5,8 +5,8 @@ permalink: /photography/
 ---
 # Photography
 
-I like to hike and take photographs along the way. Most of these photos are taken in the Chiltern hills, particularly the Ridgeway Trail, one of Britain's oldest paths. I shoot on an [[Get great with bad gear|old Sony a6000 with kit lenses]].
-
+I like to hike and take photographs along the way. Most of these photos are taken in the Chiltern hills, particularly the Ridgeway Trail, one of Britain's oldest paths. I shoot an [[Get great with bad gear|old Sony a6000 with kit lenses]].
+<hr>
 
 {% assign sorted = site.photography | sort: "publish_date" | reverse %}
 {% for photo in sorted %}

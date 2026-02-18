@@ -3,7 +3,7 @@ title: Think in bullets
 publish_date: 2026-02-16
 published: true
 ---
-The humble bullet proof list is my most-used, most-effective, most-loved tool for thought.
+The humble bullet point list is my most-used, most-effective, most-loved tool for thought.
 
 The simple act of committing ideas to a list forces you to consider their sequence, the order in which the information flows from one point to another. You create a simulation of the reader's journey, and begin to frame your ideas in a way that persuades and engages, as well as merely conveying the necessary information.
 

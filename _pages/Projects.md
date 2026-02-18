@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Ppojects
 permalink: /projects
 ---
 # An incomplete list of personal projects
@@ -22,5 +22,5 @@ I love building things, and many of my skills and interests have come from perso
 I'm always chipping away at a few personal projects. Currently in varying states of completion are:
 
 - **Book #3.** The third and final book in _The Rainmaker Writings_ trilogy. Roughly halfway through an ugly first draft.
-- **Short stories.** I enjoy writing short flash-fiction about the end of the world. These vignettes often become scaffolding my full-length books.
+- **[Short stories](https://ashtales.com/).** I enjoy writing short flash-fiction about the end of the world. These vignettes often become scaffolding my full-length books.
 - **Metal EP.** Slowly recording a short record of metal and post-hardcore songs.
