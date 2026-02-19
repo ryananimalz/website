@@ -1,4 +1,8 @@
 <div class="site-nav">
+  {% if site.notes.size > 0 %}
+    {% capture random_note_urls %}{% for note in site.notes %}{{ note.url | relative_url }}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
+  {% endif %}
+
   <a class="internal-link" href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
     Dark mode
@@ -36,5 +40,34 @@
     <li>
       <a class="internal-link" href="{{ site.baseurl }}/how-this-website-was-built">Colophon</a>
     </li>
+    <li>
+      <a class="internal-link" id="random-nav-link" href="{{ site.baseurl }}/writing/" data-random-note-urls="{{ random_note_urls | strip }}">Random</a>
+    </li>
+    <li>
+      <a class="internal-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
+    </li>
   </ul>
+
+  <script>
+    (function() {
+      var randomNavLink = document.getElementById('random-nav-link');
+      if (!randomNavLink) return;
+
+      var randomNoteUrls = (randomNavLink.getAttribute('data-random-note-urls') || '')
+        .split('|')
+        .filter(Boolean);
+
+      if (!randomNoteUrls.length) {
+        randomNavLink.setAttribute('aria-disabled', 'true');
+        randomNavLink.removeAttribute('href');
+        return;
+      }
+
+      randomNavLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        var randomIndex = Math.floor(Math.random() * randomNoteUrls.length);
+        window.location.href = randomNoteUrls[randomIndex];
+      });
+    })();
+  </script>
 </div>

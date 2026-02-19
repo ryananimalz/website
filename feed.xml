@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }} — Notes</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/writing/</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+    {% assign notes_for_feed = site.notes | sort: "last_modified_at_timestamp" | reverse %}
+    {% for note in notes_for_feed limit: 50 %}
+      {% assign note_url = site.url | append: site.baseurl | append: note.url %}
+      {% assign note_date = note.publish_date | default: note.last_modified_at | default: site.time %}
+      <item>
+        <title>{{ note.title | xml_escape }}</title>
+        <link>{{ note_url }}</link>
+        <guid>{{ note_url }}</guid>
+        <pubDate>{{ note_date | date_to_rfc822 }}</pubDate>
+        <description>{{ note.content | markdownify | strip_html | normalize_whitespace | truncatewords: 60 | xml_escape }}</description>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
