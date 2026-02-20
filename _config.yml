@@ -1,6 +1,11 @@
 title:               Ryan Law
 include:             ['_pages']
-exclude:             ['_includes/notes_graph.json']
+exclude:
+  - _site
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - _includes/notes_graph.json
 # You may need to change the base URL depending on your deploy configuration.
 baseurl:             ''
 
@@ -31,9 +36,9 @@ collections:
   notes:
     output: true
     permalink: /:slug
-  photography:
+  photos:
     output: true
-    permalink: /photography/:slug
+    permalink: /photos/:name
 
 defaults:
   - scope:
@@ -45,9 +50,9 @@ defaults:
     values:
       layout: "note"
   - scope:
-      path: "_photography/**/*.md"
+      path: "_photos/**/*.md"
     values:
-      layout: "photography"
+      layout: "photos"
 
 description: "The personal website of Ryan Law."
 url: "https://ryanlaw.me"

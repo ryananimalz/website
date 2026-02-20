@@ -13,4 +13,4 @@ Ryan is an experienced speaker, presenting at in-person events including brighto
 
 Ryan is the creator of two content marketing courses, with over 1,200 students enrolled: [How to Write Thought Leadership Content](https://courses.ryanlaw.me/how-to-write-thought-leadership-content) and [How to Edit](https://courses.ryanlaw.me/how-to-edit). Ryan is a judge for the International Content Marketing Awards and a trustee of [The Software Charity](https://www.thesoftwarecharity.org/).
 
-Ryan is the author of [[books|two novels]], the host of the [Ash Tales podcast](https://ashtales.com/podcast), an amateur [[photography|landscape photographer]], and the guitarist for [The Schrödinger Effect](https://theschrodingereffect.com/).
+Ryan is the author of [[books|two novels]], the host of the [Ash Tales podcast](https://ashtales.com/podcast), an amateur [[photos|landscape photographer]], and the guitarist for [The Schrödinger Effect](https://theschrodingereffect.com/).

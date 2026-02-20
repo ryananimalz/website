@@ -10,7 +10,9 @@ permalink: /
   {% capture random_note_urls %}{% for note in site.notes %}{{ note.url | relative_url }}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
 {% endif %}
 
-Hi! I'm [[about|Ryan Law]]. This is my personal corner of the internet, published directly from my Obsidian note vault. I write regularly about writing, marketing, and other esoterica. See my [[about]] page, learn [[how this website was built]], or <a class="internal-link" id="random-note-link" href="{{ site.baseurl }}/writing/" data-random-note-urls="{{ random_note_urls | strip }}">read a random note</a>.
+Hi! I'm [[about|Ryan Law]]. This is my personal corner of the internet, published directly from my Obsidian note vault. Everything here is a work in progress.
+
+I write notes to self about writing, marketing, and other esoterica. You can see my [[about]] page, learn [[how this website was built]], or <a class="internal-link" id="random-note-link" href="{{ site.baseurl }}/notes/" data-random-note-urls="{{ random_note_urls | strip }}">read a random note</a>.
 
 <script>
   (function() {
@@ -58,7 +60,7 @@ Hi! I'm [[about|Ryan Law]]. This is my personal corner of the internet, publishe
 {% endif %}
 
 <section>
-  <h3>Recent writing <a class="see-all-link internal-link" href="/writing/">See all</a></h3>
+  <h3>Recent writing <a class="see-all-link internal-link" href="/notes/">See all</a></h3>
 <hr>
   <ul class="note-list">
     {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
@@ -72,9 +74,9 @@ Hi! I'm [[about|Ryan Law]]. This is my personal corner of the internet, publishe
 </section>
 <br>
 <section>
-  <h3>Recent photography <a class="see-all-link internal-link" href="/photography/">See all</a></h3>
+  <h3>Recent photography <a class="see-all-link internal-link" href="/photos/">See all</a></h3>
 <hr>
-  {% assign recent_photos = site.photography | sort: "publish_date" | reverse %}
+  {% assign recent_photos = site.photos | sort: "publish_date" | reverse %}
   {% for photo in recent_photos limit: 3 %}
     <div class="photography-list-item">
       {% if photo.cover_image %}

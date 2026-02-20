@@ -14,9 +14,9 @@ layout: default
   <content>
     {{ content }}
 
-    {% assign chron_photography = site.photography | sort: "publish_date" %}
+    {% assign chron_photos = site.photos | sort: "publish_date" %}
     {% assign current_index = nil %}
-    {% for photo in chron_photography %}
+    {% for photo in chron_photos %}
       {% if photo.url == page.url %}
         {% assign current_index = forloop.index0 %}
       {% endif %}
@@ -27,11 +27,11 @@ layout: default
       {% assign newer_index = current_index | plus: 1 %}
       <nav class="note-nav">
         {% if older_index >= 0 %}
-          {% assign older_photo = chron_photography[older_index] %}
+          {% assign older_photo = chron_photos[older_index] %}
           <a class="note-nav-link note-nav-link--older internal-link" href="{{ older_photo.url }}">← {{ older_photo.title }}</a>
         {% endif %}
-        {% if newer_index < chron_photography.size %}
-          {% assign newer_photo = chron_photography[newer_index] %}
+        {% if newer_index < chron_photos.size %}
+          {% assign newer_photo = chron_photos[newer_index] %}
           <a class="note-nav-link note-nav-link--newer internal-link" href="{{ newer_photo.url }}">{{ newer_photo.title }} →</a>
         {% endif %}
       </nav>
