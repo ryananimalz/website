@@ -1,6 +1,6 @@
 ---
 title: Stanage Edge
-publish_date: 2024-05-25
+publish_date: 2022-05-25
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/a6a3b8e1-ff96-4279-a90d-8de5e88cd0e9/DSC06079.jpg
 ---
 ![](https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/a6a3b8e1-ff96-4279-a90d-8de5e88cd0e9/DSC06079.jpg)

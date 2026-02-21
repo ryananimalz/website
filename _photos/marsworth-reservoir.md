@@ -1,6 +1,6 @@
 ---
 title: Marsworth Reservoir
-publish_date: 2024-03-11
+publish_date: 2022-03-11
 cover_image: https://images.squarespace-cdn.com/content/v1/5d68ed6c3bb9890001e8307e/2e0173ce-d7b5-4c44-a2e4-ee92ad69f93e/DSC05739.jpg
 ---
 There's a cluster of reservoirs near where I grew up. I remember spending many hours walking their windswept circumference with my dad. We visited again when our eldest, Reuben, was around a year old.
