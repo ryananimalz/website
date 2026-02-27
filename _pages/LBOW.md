@@ -329,6 +329,8 @@ Kapost (2014 - 2015)
 
 ### **Talks and Webinars**
 
+- [How to make more from less website traffic](https://themarketingmeetup.com/events/how-to-make-more-from-less-website-traffic/) (The Marketing Meetup)
+- [Content Marketing in the Age of AI Search: How to Earn Visibility in LLMs](https://contentmarketinginstitute.com/ai-content-creation-tools/content-marketing-in-the-age-of-ai) (Content Marketing Institute)
 - [Ryan Law: How To Defend Your Marketing Career in the AI Era — Ahrefs Evolve 2025](https://www.youtube.com/watch?v=VAmWkmsKY1I&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AahBNIHCQmRCgGHKiGM7w%3D%3D) (Ahrefs Evolve)
 - [Everything your boss wants to know about AI search - Ryan Law - brightonSEO April 2025](https://www.youtube.com/watch?v=OrLaVobFXVI&pp=ygUUcnlhbiBsYXcgYnJpZ2h0b25zZW_YBp4C) (brightonSEO)
 - [How to Improve LLM Visibility — Ryan Law](https://www.youtube.com/watch?v=fzvTp0VbDSk&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AaiEQ%3D%3D) (Ahrefs)
