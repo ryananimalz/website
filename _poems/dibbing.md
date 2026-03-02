@@ -2,7 +2,7 @@
 title: dibbing
 publish_date: 2026-01-03
 marginalia:
-published: false
+published: true
 "":
 ---
 magpie eats my seed
