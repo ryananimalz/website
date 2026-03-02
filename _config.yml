@@ -36,6 +36,9 @@ collections:
   notes:
     output: true
     permalink: /:slug
+  poems:
+    output: true
+    permalink: /poems/:name
   photos:
     output: true
     permalink: /photos/:name
@@ -47,6 +50,10 @@ defaults:
       layout: "default"
   - scope:
       path: "_notes/**/*.md"
+    values:
+      layout: "note"
+  - scope:
+      path: "_poems/**/*.md"
     values:
       layout: "note"
   - scope:

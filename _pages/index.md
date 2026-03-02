@@ -55,7 +55,6 @@ I write notes to self about writing, marketing, and other esoterica. You can see
     </p>
   </article>
 </section>
-
 <br>
 {% endif %}
 
@@ -90,4 +89,19 @@ I write notes to self about writing, marketing, and other esoterica. You can see
       </div>
     </div>
   {% endfor %}
+</section>
+
+<br>
+<section>
+  <h3>Recent poems <a class="see-all-link internal-link" href="/poems/">See all</a></h3>
+<hr>
+  <ul class="note-list">
+    {% assign recent_poems = site.poems | sort: "last_modified_at_timestamp" | reverse %}
+    {% for poem in recent_poems limit: 10 %}
+      <li class="note-list-item">
+        <a class="internal-link note-title" href="{{ site.baseurl }}{{ poem.url }}">{{ poem.title }}</a>
+        <span class="note-date">— {{ poem.publish_date | default: poem.last_modified_at | date: "%Y-%m-%d" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
 </section>

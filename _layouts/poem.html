@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<article>
+  <div id="notes-entry-container">
+    <content>
+      {% assign random_poems = site.poems | where_exp: "poem", "poem.url != page.url" %}
+      {% if random_poems.size > 0 %}
+        {% capture random_poem_urls %}{% for poem in random_poems %}{{ poem.url | relative_url }}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
+      {% endif %}
+
+      <div class="note-heading">
+        <h1>{{ page.title }}</h1>
+        <div class="note-meta-row">
+          <time datetime="{{ page.publish_date | default: page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
+            Last updated on {{ page.publish_date | default: page.last_modified_at | date: "%B %-d, %Y" }}
+            {% endif %}
+          </time>
+
+          {% if random_poems.size > 0 %}
+            <button class="random-note-button" id="random-poem-button" type="button" aria-label="Open a random poem" data-random-poem-urls="{{ random_poem_urls | strip }}">
+              <span aria-hidden="true">🎲</span>
+              <span>Random poem</span>
+            </button>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if random_poems.size > 0 %}
+        <script>
+          (function() {
+            var randomPoemButton = document.getElementById('random-poem-button');
+            if (!randomPoemButton) return;
+
+            var randomPoemUrls = (randomPoemButton.getAttribute('data-random-poem-urls') || '')
+              .split('|')
+              .filter(Boolean);
+
+            if (!randomPoemUrls.length) {
+              randomPoemButton.setAttribute('disabled', 'disabled');
+              return;
+            }
+
+            randomPoemButton.addEventListener('click', function() {
+              var randomIndex = Math.floor(Math.random() * randomPoemUrls.length);
+              window.location.href = randomPoemUrls[randomIndex];
+            });
+          })();
+        </script>
+      {% endif %}
+
+      {{ content }}
+
+      {% assign chron_poems = site.poems | sort: "publish_date" %}
+      {% assign current_index = nil %}
+      {% for poem in chron_poems %}
+        {% if poem.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if current_index != nil %}
+        {% assign older_index = current_index | minus: 1 %}
+        {% assign newer_index = current_index | plus: 1 %}
+        <nav class="note-nav">
+          {% if older_index >= 0 %}
+            {% assign older_poem = chron_poems[older_index] %}
+            <a class="note-nav-link note-nav-link--older internal-link" href="{{ older_poem.url }}">← {{ older_poem.title }}</a>
+          {% endif %}
+          {% if newer_index < chron_poems.size %}
+            {% assign newer_poem = chron_poems[newer_index] %}
+            <a class="note-nav-link note-nav-link--newer internal-link" href="{{ newer_poem.url }}">{{ newer_poem.title }} →</a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </content>
+
+    {% if page.backlinks.size > 0 %}
+    <side style="font-size: 0.9em">
+      <h3 style="margin-bottom: 1em">Poem mentions</h3>
+      <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
+      {% for backlink in page.backlinks %}
+        <div class="backlink-box">
+        <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
+        <div style="font-size: 0.9em">{{ backlink.excerpt | strip_html | truncatewords: 20 }}</div>
+        </div>
+      {% endfor %}
+      </div>
+    </side>
+    {% endif %}
+  </div>
+</article>
