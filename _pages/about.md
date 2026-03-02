@@ -4,7 +4,7 @@ title: About
 permalink: /about
 ---
 # About
-<img src="/assets/Ryan_Law_headshot.jpg" alt="Ryan Law" width="200" style="float: right; margin-left: 20px;">
+<span class="about-photo"><img src="/assets/Ryan_Law_headshot.jpg" alt="Ryan Law" width="200"></span>
 Ryan Law is the Director of Content Marketing at [Ahrefs](https://ahrefs.com/). Previously he was CMO at the content marketing agency [Animalz](http://animalz.co/), and the co-founder of content marketing agency Cobloom.
 
 Ryan has 14-years experience as a Director, VP, and CMO, and has helped companies including Google, GoDaddy, Zapier, Algolia, and Clearbit improve their marketing and SEO.

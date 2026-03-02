@@ -72,10 +72,13 @@ layout: default
         {{ content }}
       {% endif %}
 
-      {% assign chron_notes = site.notes | sort: "publish_date" %}
+      {% assign chron_items = site.notes | sort: "publish_date" %}
+      {% if is_poem %}
+        {% assign chron_items = site.poems | sort: "publish_date" %}
+      {% endif %}
       {% assign current_index = nil %}
-      {% for note in chron_notes %}
-        {% if note.url == page.url %}
+      {% for item in chron_items %}
+        {% if item.url == page.url %}
           {% assign current_index = forloop.index0 %}
         {% endif %}
       {% endfor %}
@@ -85,12 +88,12 @@ layout: default
         {% assign newer_index = current_index | plus: 1 %}
         <nav class="note-nav">
           {% if older_index >= 0 %}
-            {% assign older_note = chron_notes[older_index] %}
-            <a class="note-nav-link note-nav-link--older internal-link" href="{{ older_note.url }}">← {{ older_note.title }}</a>
+            {% assign older_item = chron_items[older_index] %}
+            <a class="note-nav-link note-nav-link--older internal-link" href="{{ older_item.url }}">← {{ older_item.title }}</a>
           {% endif %}
-          {% if newer_index < chron_notes.size %}
-            {% assign newer_note = chron_notes[newer_index] %}
-            <a class="note-nav-link note-nav-link--newer internal-link" href="{{ newer_note.url }}">{{ newer_note.title }} →</a>
+          {% if newer_index < chron_items.size %}
+            {% assign newer_item = chron_items[newer_index] %}
+            <a class="note-nav-link note-nav-link--newer internal-link" href="{{ newer_item.url }}">{{ newer_item.title }} →</a>
           {% endif %}
         </nav>
       {% endif %}

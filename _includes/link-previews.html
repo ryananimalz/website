@@ -6,19 +6,39 @@
   }
 
   #tooltip-wrapper {
-    background: var(--color-tooltip-background);
+    background:
+      radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.28), transparent 24%),
+      radial-gradient(circle at 78% 74%, rgba(160, 136, 93, 0.015), transparent 24%),
+      repeating-linear-gradient(to bottom, transparent 0, transparent 1.38rem, rgba(156, 139, 107, 0.04) 1.38rem, rgba(156, 139, 107, 0.04) calc(1.38rem + 1px)),
+      linear-gradient(176deg, #fffefb, #fbf8ef 78%);
     padding: 1em;
     border: 1px solid var(--color-tooltip-border);
-    border-radius: 4px;
+    border-radius: 8px 6px 10px 7px;
     overflow: hidden;
     position: absolute;
     width: 400px;
     height: 250px;
     font-size: 0.8em;
-    box-shadow: 0 5px 10px var(--color-tooltip-shadow);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.45) inset,
+      0 10px 18px var(--color-tooltip-shadow),
+      1px 2px 0 rgba(92, 87, 78, 0.03);
     opacity: 0;
     transition: opacity 100ms;
     color: var(--color-tooltip-text);
+  }
+
+  #tooltip-wrapper #tooltip-content > div:first-child {
+    font-family: Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.6rem;
+  }
+
+  #tooltip-wrapper content,
+  #tooltip-wrapper p,
+  #tooltip-wrapper li {
+    line-height: 1.55;
   }
 
   #tooltip-wrapper:after {

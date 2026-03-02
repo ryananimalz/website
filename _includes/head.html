@@ -13,10 +13,7 @@
 
   <script>
     (function() {
-      var storedTheme = localStorage.getItem('theme');
-      var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var initialTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', initialTheme);
+      document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
 
@@ -55,29 +52,4 @@
     {% endif %}
   </title>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var toggleButton = document.getElementById('theme-toggle');
-      if (!toggleButton) return;
-
-      var getCurrentTheme = function() {
-        return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      };
-
-      var updateButton = function(theme) {
-        var isDark = theme === 'dark';
-        toggleButton.textContent = isDark ? 'Light mode' : 'Dark mode';
-        toggleButton.setAttribute('aria-pressed', String(isDark));
-      };
-
-      updateButton(getCurrentTheme());
-
-      toggleButton.addEventListener('click', function() {
-        var nextTheme = getCurrentTheme() === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', nextTheme);
-        localStorage.setItem('theme', nextTheme);
-        updateButton(nextTheme);
-      });
-    });
-  </script>
 </head>

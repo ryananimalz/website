@@ -12,4 +12,6 @@ Hiking in the mountains around Meiringen. Most of my time was spent carrying chi
 
 ![](/assets/5-DSC09235.jpg)
 
-![](/assets/2-DSC09308.jpg)![](/assets/3-DSC09264.jpg)
+![](/assets/2-DSC09308.jpg)
+
+![](/assets/3-DSC09264.jpg)
