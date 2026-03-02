@@ -157,7 +157,7 @@
     });
   }
 
-  document.querySelectorAll('{{ include.wrapperQuerySelector }} a').forEach(setupListeners);
+  document.querySelectorAll('{{ include.wrapperQuerySelector }} a:not(.no-preview)').forEach(setupListeners);
 </script>
 
 <!-- That file is not particularly elegant. This will need a refactor at some point.

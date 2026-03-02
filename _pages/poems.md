@@ -7,7 +7,7 @@ permalink: /poems/
 A collection of simple poems.
 
 <hr>
-{% assign all_poems = site.poems | sort: "last_modified_at_timestamp" | reverse %}
+{% assign all_poems = site.poems | sort: "publish_date" | reverse %}
 {% for poem in all_poems %}
   <div class="note-list-item">
     <a class="internal-link note-title" href="{{ site.baseurl }}{{ poem.url }}">{{ poem.title }}</a>

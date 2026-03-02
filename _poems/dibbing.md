@@ -1,6 +1,6 @@
 ---
 title: dibbing
-publish_date: 2026-01-03
+publish_date: 2026-02-03
 marginalia:
 published: true
 "":
