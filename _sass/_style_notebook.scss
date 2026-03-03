@@ -921,6 +921,8 @@ content .note-list a.internal-link,
 content .note-list-item a.internal-link {
   background: transparent;
   border-bottom: 0;
+  display: inline;
+  width: auto;
 }
 
 content .note-list a.internal-link:hover,
