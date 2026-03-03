@@ -28,8 +28,8 @@ permalink: /
   </section>
 
   {% if latest_note %}
-    <article class="home-card home-latest-promo">
-      <p class="home-kicker">Latest note</p>
+    <article class="home-latest-promo">
+      <p class="latest-note-label">Latest note</p>
       <h2 class="home-card-title latest-note-title">
         <a class="internal-link note-title" href="{{ site.baseurl }}{{ latest_note.url }}">{{ latest_note.title }}</a>
       </h2>
@@ -53,7 +53,7 @@ permalink: /
         {% for note in recent_notes offset:1 limit:6 %}
           <li class="note-list-item">
             <a class="internal-link note-title" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-            <span class="note-date">— {{ note.publish_date | default: note.last_modified_at | date: "%Y-%m-%d" }}</span>
+            <span class="note-date"><span class="note-date-separator" aria-hidden="true">— </span>{{ note.publish_date | default: note.last_modified_at | date: "%Y-%m-%d" }}</span>
           </li>
         {% endfor %}
       </ul>

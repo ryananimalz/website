@@ -5,6 +5,6 @@ marginalia:
 published: true
 "":
 ---
-magpie eats my seed
+magpie eats my seeds
 beneath the budding cherry tree—
-dibbing to no end
+dibbing, to no end

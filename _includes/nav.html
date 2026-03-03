@@ -3,14 +3,15 @@
     {% capture random_note_urls %}{% for note in site.notes %}{{ note.url | relative_url }}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
   {% endif %}
 
-  <a class="internal-link" href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
-  <p class="site-nav-subtitle">The personal website of Ryan Law.</p>
-  <input class="nav-toggle" type="checkbox" id="nav-toggle">
-  <label class="nav-toggle-label" for="nav-toggle">
+  <div class="site-nav-heading">
+    <a class="internal-link" href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
+    <p class="site-nav-subtitle">The personal website of Ryan Law.</p>
+  </div>
+  <button class="nav-toggle-label" type="button" aria-expanded="false" aria-controls="site-nav-links">
     <span class="nav-toggle-text">Menu</span>
     <span class="nav-toggle-icon" aria-hidden="true"></span>
-  </label>
-  <ul class="site-nav-links">
+  </button>
+  <ul class="site-nav-links" id="site-nav-links">
     <li>
       <a class="internal-link" href="{{ site.baseurl }}/about">About</a>
     </li>
@@ -51,7 +52,67 @@
 
   <script>
     (function() {
+      var siteNav = document.querySelector('.site-nav');
+      var toggleButton = siteNav ? siteNav.querySelector('.nav-toggle-label') : null;
+      var navLinks = siteNav ? siteNav.querySelector('.site-nav-links') : null;
       var randomNavLink = document.getElementById('random-nav-link');
+      var mobileMediaQuery = window.matchMedia('(max-width: 900px)');
+
+      if (siteNav && toggleButton && navLinks) {
+        function closeMenu() {
+          siteNav.classList.remove('is-expanded');
+          siteNav.classList.add('is-collapsed');
+          toggleButton.setAttribute('aria-expanded', 'false');
+        }
+
+        function openMenu() {
+          siteNav.classList.add('is-expanded');
+          siteNav.classList.remove('is-collapsed');
+          toggleButton.setAttribute('aria-expanded', 'true');
+        }
+
+        function syncNavState() {
+          if (mobileMediaQuery.matches) {
+            closeMenu();
+          } else {
+            siteNav.classList.remove('is-collapsed');
+            siteNav.classList.remove('is-expanded');
+            toggleButton.setAttribute('aria-expanded', 'false');
+          }
+        }
+
+        toggleButton.addEventListener('click', function() {
+          if (!mobileMediaQuery.matches) return;
+
+          if (siteNav.classList.contains('is-expanded')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        navLinks.addEventListener('click', function(event) {
+          if (!mobileMediaQuery.matches) return;
+          if (!event.target.closest('a')) return;
+          closeMenu();
+        });
+
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && mobileMediaQuery.matches && siteNav.classList.contains('is-expanded')) {
+            closeMenu();
+            toggleButton.focus();
+          }
+        });
+
+        if (typeof mobileMediaQuery.addEventListener === 'function') {
+          mobileMediaQuery.addEventListener('change', syncNavState);
+        } else if (typeof mobileMediaQuery.addListener === 'function') {
+          mobileMediaQuery.addListener(syncNavState);
+        }
+
+        syncNavState();
+      }
+
       if (!randomNavLink) return;
 
       var randomNoteUrls = (randomNavLink.getAttribute('data-random-note-urls') || '')

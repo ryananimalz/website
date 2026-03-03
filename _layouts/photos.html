@@ -39,7 +39,7 @@ layout: default
   </content>
 </article>
 
-<div class="lightbox" id="photo-lightbox" aria-hidden="true" role="dialog" aria-label="Image lightbox">
+<div class="lightbox" id="photo-lightbox" aria-hidden="true" aria-modal="true" role="dialog" aria-label="Image lightbox">
   <button class="lightbox-prev" type="button" aria-label="Previous image">←</button>
   <button class="lightbox-close" type="button" aria-label="Close image">×</button>
   <img class="lightbox-image" src="" alt="">
@@ -58,6 +58,20 @@ layout: default
     var prevButton = lightbox.querySelector('.lightbox-prev');
     var nextButton = lightbox.querySelector('.lightbox-next');
     var currentIndex = -1;
+    var lastTrigger = null;
+
+    contentImages.forEach(function(image) {
+      image.setAttribute('tabindex', '0');
+      image.setAttribute('role', 'button');
+
+      if (!image.getAttribute('aria-label')) {
+        image.setAttribute('aria-label', 'Open image in lightbox');
+      }
+    });
+
+    function getFocusableElements() {
+      return Array.prototype.slice.call(lightbox.querySelectorAll('button:not([disabled])'));
+    }
 
     function showImage(index) {
       if (!contentImages.length) return;
@@ -69,10 +83,12 @@ layout: default
 
     function openLightbox(image) {
       var index = contentImages.indexOf(image);
+      lastTrigger = image;
       showImage(index === -1 ? 0 : index);
       lightbox.classList.add('is-open');
       lightbox.setAttribute('aria-hidden', 'false');
       document.body.classList.add('lightbox-open');
+      closeButton.focus();
     }
 
     function closeLightbox() {
@@ -81,12 +97,26 @@ layout: default
       lightboxImage.src = '';
       lightboxImage.alt = '';
       document.body.classList.remove('lightbox-open');
+
+      if (lastTrigger && typeof lastTrigger.focus === 'function') {
+        lastTrigger.focus();
+      }
     }
 
     photograph.addEventListener('click', function(event) {
       var clickedImage = event.target.closest('content img');
       if (!clickedImage) return;
       openLightbox(clickedImage);
+    });
+
+    photograph.addEventListener('keydown', function(event) {
+      var focusedImage = event.target.closest('content img');
+      if (!focusedImage) return;
+
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(focusedImage);
+      }
     });
 
     closeButton.addEventListener('click', closeLightbox);
@@ -108,6 +138,20 @@ layout: default
 
       if (event.key === 'Escape') {
         closeLightbox();
+      } else if (event.key === 'Tab') {
+        var focusableElements = getFocusableElements();
+        if (!focusableElements.length) return;
+
+        var firstElement = focusableElements[0];
+        var lastElement = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
       } else if (event.key === 'ArrowLeft') {
         event.preventDefault();
         showImage(currentIndex - 1);
