@@ -1312,6 +1312,8 @@ html[data-theme="dark"] .home-card::before {
 }
 
 .home-writing-list .note-title {
+  display: inline;
+  width: auto;
   font-weight: 400;
 }
 
