@@ -10,6 +10,10 @@
       <footer>{% include footer.html %}</footer>
     </div>
 
-    {% include link-previews.html wrapperQuerySelector="content" %}
+    {% comment %}
+      Internal-link hover previews are disabled for now because they make the UI feel too busy.
+      Keeping the include here commented so it can be restored quickly if needed.
+      {% include link-previews.html wrapperQuerySelector="content" %}
+    {% endcomment %}
   </body>
 </html>

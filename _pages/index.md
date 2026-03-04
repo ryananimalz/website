@@ -15,7 +15,7 @@ permalink: /
       <div class="home-intro">
         <h1>Hi! I'm <a class="internal-link" href="{{ site.baseurl }}/about">Ryan Law</a>.</h1>
         <p>This is my personal corner of the internet, published directly from my Obsidian note vault. Everything here is a work in progress.</p>
-        <p>I write notes to self about writing, marketing, and other esoterica. I also share the occasional poems and photograph.</p>
+        <p>I write notes to self about writing, marketing, and other esoterica. I also share the occasional poem and photograph.</p>
         <p>You can see my <a class="internal-link" href="{{ site.baseurl }}/about">About</a> page, learn <a class="internal-link" href="{{ site.baseurl }}/how-this-website-was-built">how this website was built</a>, or <a class="internal-link" id="random-note-link" href="{{ site.baseurl }}/notes/" data-random-note-urls="{{ random_note_urls | strip }}">read a random note</a>.</p>
       </div>
 
