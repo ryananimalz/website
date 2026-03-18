@@ -2,6 +2,7 @@
 title: Quality content can be automated now
 publish_date: 2026-02-27
 published: true
+marginalia: "This note received long-form treatment on the Ahrefs blog: https://ahrefs.com/blog/ai-content-wasnt-good-enough-now-it-is/."
 ---
 Pretty soon most technology companies will fully automate content creation, and it will be indistinguishable from all the human-written content they have produced in previous years.
 
