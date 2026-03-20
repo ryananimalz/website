@@ -5,7 +5,7 @@ published: true
 ---
 The most important thing you can do in work and life is to build a habit of finishing things.
 
-It's easy to derail yourself and lose confidence when projects are halfway done. Your motivation ebbs, you encounter greater friction than expected, you find yourself drawn to something with greater promise.
+It's easy to derail yourself and [[Do it scared|lose confidence]] when projects are halfway done. [[Embrace unevenness|Your motivation ebbs]], you encounter greater friction than expected, you find yourself drawn to something with greater promise.
 
 But there are no rewards for ideas that could have been, for projects that languish in your drafts folder. Inversely, there are a great many rewards for finished projects, even those that failed to live up to their original vision.
 

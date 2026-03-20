@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign canonical_url = site.canonical_url | default: site.url %}
+  {% assign pages_for_sitemap = site.html_pages | where_exp: "item", "item.url != '/404.html'" | sort: "url" %}
+  {% for item in pages_for_sitemap %}
+    {% assign lastmod = item.last_modified_at | default: item.date | default: site.time %}
+    <url>
+      <loc>{{ canonical_url }}{{ item.url | xml_escape }}</loc>
+      <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+    </url>
+  {% endfor %}
+  {% assign collections_for_sitemap = site.notes | concat: site.poems | concat: site.photos | sort: "url" %}
+  {% for item in collections_for_sitemap %}
+    {% assign lastmod = item.last_modified_at | default: item.publish_date | default: item.date | default: site.time %}
+    <url>
+      <loc>{{ canonical_url }}{{ item.url | xml_escape }}</loc>
+      <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+    </url>
+  {% endfor %}
+</urlset>

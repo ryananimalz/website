@@ -63,3 +63,42 @@ defaults:
 
 description: "The personal website of Ryan Law."
 url: "https://ryanlaw.me"
+canonical_url: "https://ryanlaw.me"
+
+person_schema:
+  id: "https://ryanlaw.me/#ryan-law"
+  name: "Ryan Law"
+  url: "https://ryanlaw.me"
+  image: "https://ryanlaw.me/assets/Ryan_Law_headshot.jpg"
+  description: "Ryan Law is the Director of Content Marketing at Ahrefs, writer, speaker, and creator of content marketing courses."
+  job_title: "Director of Content Marketing"
+  same_as:
+    - "https://www.linkedin.com/in/thinkingslow/"
+    - "https://x.com/thinking_slow"
+    - "https://courses.ryanlaw.me/"
+    - "https://ashtales.com/"
+    - "https://ashtales.com/podcast"
+  knows_about:
+    - "Content marketing"
+    - "SEO"
+    - "Writing"
+    - "Editing"
+    - "Thought leadership"
+    - "Public speaking"
+  works_for:
+    name: "Ahrefs"
+    url: "https://ahrefs.com/"
+  affiliations:
+    - name: "Animalz"
+      url: "https://www.animalz.co/"
+    - name: "Cobloom"
+      url: "https://www.cobloom.com/"
+    - name: "The Software Charity"
+      url: "https://www.thesoftwarecharity.org/"
+  occupations:
+    - name: "Content marketer"
+      description: "Marketing leader focused on content marketing, SEO, and thought leadership."
+    - name: "Writer"
+      description: "Author of novels and writer of notes about writing, marketing, and related ideas."
+    - name: "Speaker"
+      description: "Speaker, workshop leader, and trainer on content marketing, SEO, and AI in marketing."

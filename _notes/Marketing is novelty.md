@@ -1,5 +1,5 @@
 ---
-title: Marketing is a continued exercise in novelty
+title: Marketing is novelty
 publish_date: 2025-07-07
 published: true
 ---

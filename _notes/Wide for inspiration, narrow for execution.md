@@ -5,7 +5,7 @@ published: true
 tags:
   - writing
 ---
-I think of writing as constant vacillation between two competing states: wide and narrow. Both states are necessary, but they are enemies, and many problems result from residing too long in the incorrect state.
+I think of writing as [[Embrace unevenness|constant vacillation between two competing states]]: wide and narrow. Both states are necessary, but they are enemies, and many problems result from residing too long in the incorrect state.
 
 To find inspiration it's important to cast a wide net, to read and watch and listen to as many disparate and unrelated things as possible. We are trying to [[Creativity is a muscle|put more pieces on the table]] and encourage as many strange, serendipitous connections between ideas as possible.
 

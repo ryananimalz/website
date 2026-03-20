@@ -1,0 +1,90 @@
+{% assign person = site.person_schema %}
+{% assign page_path = page.url | default: "/" %}
+{% assign canonical_url = site.canonical_url | default: site.url %}
+{% assign page_url = canonical_url | append: page_path %}
+{% assign page_title = page.title | default: site.title %}
+{% assign page_description = page.excerpt | default: site.description | strip_html | strip_newlines | normalize_whitespace %}
+{% assign page_type = "WebPage" %}
+{% assign page_id = page_url | append: "#webpage" %}
+{% if page.url == "/about" %}
+  {% assign page_type = "ProfilePage" %}
+{% endif %}
+{% if page.id == "home" %}
+  {% assign page_title = site.title %}
+{% endif %}
+{% if page_path == "/" %}
+  {% assign page_id = canonical_url | append: "/#webpage" %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person.id | jsonify }},
+      "name": {{ person.name | jsonify }},
+      "url": {{ person.url | jsonify }},
+      "image": {{ person.image | jsonify }},
+      "description": {{ person.description | jsonify }},
+      "jobTitle": {{ person.job_title | jsonify }},
+      "mainEntityOfPage": {
+        "@id": {{ canonical_url | append: "/about#webpage" | jsonify }}
+      },
+      "sameAs": {{ person.same_as | jsonify }},
+      "knowsAbout": {{ person.knows_about | jsonify }},
+      "worksFor": {
+        "@type": "Organization",
+        "@id": {{ person.works_for.url | append: "#organization" | jsonify }},
+        "name": {{ person.works_for.name | jsonify }},
+        "url": {{ person.works_for.url | jsonify }}
+      },
+      "affiliation": [
+        {% for affiliation in person.affiliations %}
+        {
+          "@type": "Organization",
+          "@id": {{ affiliation.url | append: "#organization" | jsonify }},
+          "name": {{ affiliation.name | jsonify }},
+          "url": {{ affiliation.url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "hasOccupation": [
+        {% for occupation in person.occupations %}
+        {
+          "@type": "Occupation",
+          "name": {{ occupation.name | jsonify }},
+          "description": {{ occupation.description | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ canonical_url | append: "/#website" | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": {{ person.id | jsonify }}
+      }
+    },
+    {
+      "@type": {{ page_type | jsonify }},
+      "@id": {{ page_id | jsonify }},
+      "url": {{ page_url | jsonify }},
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "isPartOf": {
+        "@id": {{ canonical_url | append: "/#website" | jsonify }}
+      }{% if page.url == "/about" %},
+      "mainEntity": {
+        "@id": {{ person.id | jsonify }}
+      }{% elsif page.url == "/" %},
+      "about": {
+        "@id": {{ person.id | jsonify }}
+      }{% endif %}
+    }
+  ]
+}
+</script>

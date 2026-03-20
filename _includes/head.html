@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="canonical" href="{{ site.canonical_url }}{{ page.url }}" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,13 +35,13 @@
 
   {% if page.publish_date or page.date %}
   <meta property="article:published_time" content="{{ page.publish_date | default: page.date | date_to_xmlschema }}">
-  <meta property="article:author" content="{{ site.url }}/">
+  <meta property="article:author" content="{{ site.canonical_url }}/">
   {% endif %}
 
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:url" content="{{ site.canonical_url }}{{ page.url }}" />
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="og:image" content="{{ site.canonical_url }}{{ page.image }}">
   {% endif %}
 
   <title>
@@ -51,5 +51,7 @@
       {{ page.title }} &mdash; {{ site.title }}
     {% endif %}
   </title>
+
+  {% include schema.html %}
 
 </head>
