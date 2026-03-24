@@ -7,7 +7,7 @@ Fear doesn't need to be a barrier. You can confront something terrifying, feel a
 
 *"I feel scared. I guess I'll just do it scared."*
 
-This was a profound realisation. Sometimes, fear is rational and protective. But most of the time, especially in our professional lives, it serves a lesser purpose. It can be ignored and overridden to no detriment.
+Sometimes, fear is rational and protective. But most of the time, especially in our professional lives, it serves a lesser purpose. It can be ignored and overridden to no detriment.
 
 In fact, often to your gain: it's usually fear, and nothing else, that stands between you and the afterglow of a keynote speech to 600 people, or the thrill of exploring a new country, or the camaraderie of hosting an executive dinner with people vastly more accomplished than you. Rarely are those opportunities gifted to people incapable of realising their potential. Fear is the barrier, not ability.
 

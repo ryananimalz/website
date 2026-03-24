@@ -1,5 +1,5 @@
 ---
-title: crocus flowers
+title: crocus
 publish_date: 2026-03-04
 marginalia:
 published: true
