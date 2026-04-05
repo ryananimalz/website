@@ -7,4 +7,4 @@ published: true
 ---
 worm moon rises
 above the firs—the sky bleeds
-pastel, pink and blue.
+pastel pink and blue

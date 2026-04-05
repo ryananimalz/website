@@ -7,4 +7,4 @@ published: true
 ---
 deep drifts of needles—
 lost within a stand of pines
-where Autumn never left.
+where Autumn never left

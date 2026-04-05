@@ -7,4 +7,4 @@ published: true
 ---
 moorhen's ragged nest—
 a burr upon the surface
-of the wine-dark pond.
+of the wine-dark pond

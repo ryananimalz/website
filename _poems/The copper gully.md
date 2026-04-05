@@ -1,9 +1,8 @@
 ---
 title: The copper gully
 publish_date: 2026-03-30
-marginalia:
+marginalia: Written over several days on holiday in a forest in Spring.
 published: true
-"":
 ---
 The gully, lined with copper leaves,
 Succumbs at creeping edge

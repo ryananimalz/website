@@ -7,4 +7,4 @@ published: true
 ---
 raining, the runoff
 pools between the roots, in clumps
-of glowing primrose.
+of glowing primrose
