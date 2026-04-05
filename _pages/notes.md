@@ -18,11 +18,11 @@ permalink: /notes/
     {% endfor %}
   </content>
 
-  <side style="font-size: 0.9em">
-    <h3 style="margin-bottom: 1em">Marginalia</h3>
-    <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
-      <div class="backlink-box">
-        <div style="font-size: 0.9em">
+  <side class="side-panel" aria-label="Marginalia">
+    <h3 class="side-panel-title">Marginalia</h3>
+    <div class="side-panel-items">
+      <div class="backlink-box side-panel-item">
+        <div class="side-panel-text">
           There is no newsletter for this website, but you can find an RSS feed of my latest notes <a href="https://ryanlaw.me/feed.xml">here</a>.<br><br>
           For my writing and research on SEO and marketing, see the <a href="https://ahrefs.com/blog/">Ahrefs blog</a>.
         </div>

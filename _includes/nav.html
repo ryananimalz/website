@@ -11,53 +11,58 @@
     <span class="nav-toggle-text">Menu</span>
     <span class="nav-toggle-icon" aria-hidden="true"></span>
   </button>
-  <ul class="site-nav-links" id="site-nav-links">
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/about">About</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/notes">Notes</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/beliefs">Beliefs</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/poems">Poems</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/photos">Photos</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/books">Books</a>
-    </li>
-    <li>
-      <a href="https://ashtales.com/">Stories</a>
-    </li>
-    <li>
-      <a href="https://courses.ryanlaw.me/">Courses</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/projects">Projects</a> 
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/LBOW">LBOW</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/how-this-website-was-built">Colophon</a>
-    </li>
-    <li>
-      <a class="internal-link" id="random-nav-link" href="{{ site.baseurl }}/notes/" data-random-note-urls="{{ random_note_urls | strip }}">Random</a>
-    </li>
-    <li>
-      <a class="internal-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
-    </li>
-  </ul>
+  <div class="site-nav-sections" id="site-nav-links">
+    <ul class="site-nav-links site-nav-links--primary">
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/about">About</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/notes">Notes</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/beliefs">Beliefs</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/poems">Poems</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/photos">Photos</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/books">Books</a>
+      </li>
+      <li>
+        <a href="https://ashtales.com/">Stories</a>
+      </li>
+      <li>
+        <a href="https://courses.ryanlaw.me/">Courses</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/projects">Projects</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/LBOW">LBOW</a>
+      </li>
+    </ul>
+
+    <ul class="site-nav-links site-nav-links--secondary" aria-label="Site utilities">
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/how-this-website-was-built">Colophon</a>
+      </li>
+      <li>
+        <a class="internal-link" id="random-nav-link" href="{{ site.baseurl }}/notes/" data-random-note-urls="{{ random_note_urls | strip }}">Random</a>
+      </li>
+      <li>
+        <a class="internal-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
+      </li>
+    </ul>
+  </div>
 
   <script>
     (function() {
       var siteNav = document.querySelector('.site-nav');
       var toggleButton = siteNav ? siteNav.querySelector('.nav-toggle-label') : null;
-      var navLinks = siteNav ? siteNav.querySelector('.site-nav-links') : null;
+      var navLinks = siteNav ? siteNav.querySelector('.site-nav-sections') : null;
       var randomNavLink = document.getElementById('random-nav-link');
       var mobileMediaQuery = window.matchMedia('(max-width: 900px)');
 
