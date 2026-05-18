@@ -22,7 +22,7 @@ permalink: /
 
       <div class="home-portrait">
         <span class="about-photo">
-          <img src="{{ site.baseurl }}/assets/Ryan_Law_headshot.jpg" alt="Ryan Law" width="200" loading="lazy">
+          <img src="{{ site.baseurl }}/assets/Ryan_Law_headshot.jpg" alt="Ryan Law" width="200" height="300" loading="lazy">
         </span>
       </div>
     </div>

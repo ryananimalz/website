@@ -1,0 +1,219 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "fileutils"
+require "mini_magick"
+require "pathname"
+require "tmpdir"
+
+ROOT = Pathname(__dir__).join("..").expand_path
+ASSETS_DIR = ROOT.join("assets")
+SUPPORTED_EXTENSIONS = %w[.jpg .jpeg .png .webp].freeze
+MAX_LONG_EDGE = 1600
+JPEG_QUALITY = "78"
+WEBP_QUALITY = "80"
+IGNORED_PROPERTY_KEYS = /\A(?:date:(?:create|modify|timestamp)|signature)\z/
+
+def abort_with(message)
+  warn "Error: #{message}"
+  exit 1
+end
+
+def usage
+  <<~TEXT
+    Usage:
+      script/images import SOURCE DEST
+      script/images check [paths...]
+  TEXT
+end
+
+def image_file?(path)
+  path.file? && SUPPORTED_EXTENSIONS.include?(path.extname.downcase)
+end
+
+def format_family(path)
+  case path.extname.downcase
+  when ".jpg", ".jpeg"
+    :jpeg
+  when ".png"
+    :png
+  when ".webp"
+    :webp
+  else
+    :unknown
+  end
+end
+
+def normalize_destination(path_string)
+  path = Pathname(path_string)
+  absolute = path.absolute? ? path : ROOT.join(path)
+  absolute = absolute.expand_path
+
+  abort_with("destination must live inside #{ASSETS_DIR}") unless absolute.to_s.start_with?("#{ASSETS_DIR}/") || absolute == ASSETS_DIR
+  abort_with("unsupported destination format: #{absolute.extname}") unless SUPPORTED_EXTENSIONS.include?(absolute.extname.downcase)
+
+  absolute
+end
+
+def display_path(path)
+  expanded = path.expand_path
+  return expanded.relative_path_from(ROOT).to_s if expanded.to_s.start_with?("#{ROOT}/")
+
+  expanded.to_s
+end
+
+def collect_image_paths(raw_paths)
+  candidates = if raw_paths.empty?
+    [ASSETS_DIR]
+  else
+    raw_paths.map { |value| (Pathname(value).absolute? ? Pathname(value) : ROOT.join(value)).expand_path }
+  end
+
+  files = candidates.flat_map do |path|
+    if path.directory?
+      Dir.glob(path.join("**/*").to_s).map { |child| Pathname(child) }.select { |child| image_file?(child) }
+    elsif image_file?(path)
+      [path]
+    else
+      []
+    end
+  end
+
+  files.sort_by(&:to_s)
+end
+
+def normalize_image!(path)
+  image = MiniMagick::Image.open(path.to_s)
+  image.combine_options do |command|
+    command.auto_orient
+    command.strip
+    command.resize "#{MAX_LONG_EDGE}x#{MAX_LONG_EDGE}>"
+
+    case format_family(path)
+    when :jpeg
+      command.interlace "Plane"
+      command.quality JPEG_QUALITY
+      command.sampling_factor "4:2:0"
+    when :webp
+      command.quality WEBP_QUALITY
+    end
+  end
+  image.write(path.to_s)
+end
+
+def relevant_properties(data)
+  properties = data.fetch("properties", {})
+  properties.reject { |key, _value| key.match?(IGNORED_PROPERTY_KEYS) }
+end
+
+def image_state(path)
+  data = MiniMagick::Image.open(path.to_s).data
+
+  {
+    format_family: format_family(path),
+    width: data.dig("geometry", "width"),
+    height: data.dig("geometry", "height"),
+    orientation: data["orientation"],
+    interlace: data["interlace"],
+    quality: data["quality"],
+    compression: data["compression"],
+    colorspace: data["colorspace"],
+    properties: relevant_properties(data),
+    filesize: File.size(path)
+  }
+end
+
+def normalized_match?(original_path, normalized_path)
+  original = image_state(original_path)
+  normalized = image_state(normalized_path)
+
+  checks = []
+  checks << (original[:format_family] == normalized[:format_family])
+  checks << (original[:width] == normalized[:width])
+  checks << (original[:height] == normalized[:height])
+  checks << (original[:orientation] == normalized[:orientation])
+  checks << (original[:interlace] == normalized[:interlace])
+  checks << (original[:compression] == normalized[:compression])
+  checks << (original[:colorspace] == normalized[:colorspace])
+  checks << (original[:properties] == normalized[:properties])
+
+  if original[:quality] && normalized[:quality]
+    checks << (original[:quality] == normalized[:quality])
+  end
+
+  tolerance = case original[:format_family]
+              when :jpeg, :webp
+                1.05
+              else
+                1.0
+              end
+  checks << (original[:filesize] <= (normalized[:filesize] * tolerance).ceil)
+
+  checks.all?
+end
+
+def import_image(source_arg, destination_arg)
+  source = (Pathname(source_arg).absolute? ? Pathname(source_arg) : ROOT.join(source_arg)).expand_path
+  abort_with("source image not found: #{source}") unless source.file?
+  abort_with("unsupported source format: #{source.extname}") unless SUPPORTED_EXTENSIONS.include?(source.extname.downcase)
+
+  destination = normalize_destination(destination_arg)
+
+  if format_family(source) != format_family(destination)
+    abort_with("source and destination formats must match to preserve the original format")
+  end
+
+  FileUtils.mkdir_p(destination.dirname)
+
+  Dir.mktmpdir("image-import") do |dir|
+    temp_copy = Pathname(dir).join(destination.basename)
+    FileUtils.cp(source, temp_copy)
+    normalize_image!(temp_copy)
+    FileUtils.mv(temp_copy, destination, force: true)
+  end
+
+  puts "Imported #{display_path(destination)}"
+end
+
+def check_images(paths)
+  files = collect_image_paths(paths)
+  abort_with("no supported images found") if files.empty?
+
+  offenders = []
+
+  files.each do |path|
+    Dir.mktmpdir("image-check") do |dir|
+      temp_copy = Pathname(dir).join(path.basename)
+      FileUtils.cp(path, temp_copy)
+      normalize_image!(temp_copy)
+
+      offenders << path unless normalized_match?(path, temp_copy)
+    end
+  end
+
+  if offenders.empty?
+    puts "All checked images are normalized."
+    return
+  end
+
+  warn "The following images are not normalized:"
+  offenders.each do |path|
+    warn "  - #{display_path(path)}"
+  end
+  warn
+  warn "Re-import each file with script/images import SOURCE DEST after restoring the original source file."
+  exit 1
+end
+
+command = ARGV.shift
+
+case command
+when "import"
+  abort_with(usage) unless ARGV.length == 2
+  import_image(ARGV[0], ARGV[1])
+when "check"
+  check_images(ARGV)
+else
+  abort_with(usage)
+end

@@ -16,6 +16,23 @@ Preview the template here: https://digital-garden-jekyll-template.netlify.app/
 - Features a simple and responsive design
 - Supports Markdown or HTML notes
 
+## Working with images
+
+Local site images live in `assets/`, but the repo should only store web-ready versions.
+
+- Keep full-resolution originals outside this repo.
+- Never drag raw camera exports or oversized screenshots directly into `assets/`.
+- Import local images with `script/images import /path/to/original.jpg assets/your-image.jpg`.
+- Run `script/images check` to verify that committed images are already normalized.
+
+The image pipeline will:
+
+- auto-rotate using EXIF orientation
+- strip camera, GPS, and other metadata
+- resize images so the long edge is at most `1600px`
+- preserve the original format
+- normalize JPEG, PNG, and WebP output for the site
+
 <img width="1522" alt="Screen Shot 2020-05-19 at 23 05 46" src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png">
 
 ## A note about GitHub Pages
