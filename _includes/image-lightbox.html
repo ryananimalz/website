@@ -1,0 +1,128 @@
+{% assign lightbox_id = include.id | default: "image-lightbox" %}
+{% assign lightbox_scope = include.scope_selector | default: "content" %}
+{% assign lightbox_images = include.image_selector | default: "img" %}
+<div class="lightbox" id="{{ lightbox_id }}" aria-hidden="true" aria-modal="true" role="dialog" aria-label="Image lightbox">
+  <button class="lightbox-prev" type="button" aria-label="Previous image">←</button>
+  <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+  <img class="lightbox-image" src="" alt="">
+  <button class="lightbox-next" type="button" aria-label="Next image">→</button>
+</div>
+
+<script>
+  (function() {
+    var scope = document.querySelector({{ lightbox_scope | jsonify }});
+    var lightbox = document.getElementById({{ lightbox_id | jsonify }});
+    if (!scope || !lightbox) return;
+
+    var contentImages = Array.prototype.slice.call(scope.querySelectorAll({{ lightbox_images | jsonify }}));
+    if (!contentImages.length) return;
+
+    var lightboxImage = lightbox.querySelector('.lightbox-image');
+    var closeButton = lightbox.querySelector('.lightbox-close');
+    var prevButton = lightbox.querySelector('.lightbox-prev');
+    var nextButton = lightbox.querySelector('.lightbox-next');
+    var currentIndex = -1;
+    var lastTrigger = null;
+
+    contentImages.forEach(function(image) {
+      image.setAttribute('tabindex', '0');
+      image.setAttribute('role', 'button');
+
+      if (!image.getAttribute('aria-label')) {
+        image.setAttribute('aria-label', 'Open image in lightbox');
+      }
+    });
+
+    function getFocusableElements() {
+      return Array.prototype.slice.call(lightbox.querySelectorAll('button:not([disabled])'));
+    }
+
+    function showImage(index) {
+      if (!contentImages.length) return;
+      currentIndex = (index + contentImages.length) % contentImages.length;
+      var image = contentImages[currentIndex];
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || '';
+    }
+
+    function openLightbox(image) {
+      var index = contentImages.indexOf(image);
+      lastTrigger = image;
+      showImage(index === -1 ? 0 : index);
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+      closeButton.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      lightboxImage.alt = '';
+      document.body.classList.remove('lightbox-open');
+
+      if (lastTrigger && typeof lastTrigger.focus === 'function') {
+        lastTrigger.focus();
+      }
+    }
+
+    scope.addEventListener('click', function(event) {
+      var clickedImage = event.target.closest({{ lightbox_images | jsonify }});
+      if (!clickedImage) return;
+      openLightbox(clickedImage);
+    });
+
+    scope.addEventListener('keydown', function(event) {
+      var focusedImage = event.target.closest({{ lightbox_images | jsonify }});
+      if (!focusedImage) return;
+
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(focusedImage);
+      }
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+    prevButton.addEventListener('click', function() {
+      showImage(currentIndex - 1);
+    });
+    nextButton.addEventListener('click', function() {
+      showImage(currentIndex + 1);
+    });
+
+    lightbox.addEventListener('click', function(event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (!lightbox.classList.contains('is-open')) return;
+
+      if (event.key === 'Escape') {
+        closeLightbox();
+      } else if (event.key === 'Tab') {
+        var focusableElements = getFocusableElements();
+        if (!focusableElements.length) return;
+
+        var firstElement = focusableElements[0];
+        var lastElement = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showImage(currentIndex - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showImage(currentIndex + 1);
+      }
+    });
+  })();
+</script>

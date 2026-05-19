@@ -11,6 +11,16 @@ This page is curated for personal use, but you may find the most recent links he
 ## Articles
 Ahrefs (2023 - present)
 
+- [On-Page AEO: 4 Writing Frameworks for Better AI Visibility](https://ahrefs.com/blog/on-page-aeo/)
+- [How Does AI Get Its Information? Training Data, RAG, MCPs, and APIs Explained](https://ahrefs.com/blog/how-does-ai-get-its-information/)
+- [Agentic AI vs. Generative AI: What’s the Difference, and Why Does It Matter?](https://ahrefs.com/blog/agentic-ai-vs-generative-ai/)
+- [How I Do Content Engineering with Claude Code](https://ahrefs.com/blog/how-i-do-content-engineering-with-claude-code/)
+- [AI Content Wasn’t Good Enough. Now It Is.](https://ahrefs.com/blog/ai-content-wasnt-good-enough-now-it-is/)
+- [What Are Secondary Keywords? (And How to Use Them)](https://ahrefs.com/blog/secondary-keywords/)
+- [Reddit Keyword Research: 4 Methods to Find Keywords Your Competitors Miss](https://ahrefs.com/blog/reddit-keyword-research/)
+- [Focus Keywords: What They Are, and How to Choose the Right One](https://ahrefs.com/blog/focus-keywords/)
+- [Wikipedia vs Grokipedia: 5x the Pages, 70x the Citations, 1615x the Traffic](https://ahrefs.com/blog/wikipedia-vs-grokipedia/)
+- [12 Content Marketing Conferences to Attend in 2026](https://ahrefs.com/blog/content-marketing-conferences/)
 - [Update: AI Overviews Reduce Clicks by 58%](https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/)
 - [What AI Means for SEO](https://ahrefs.com/blog/what-ai-means-for-seo/ "Permanent Link to What AI Means for SEO")
 - [What Triggers AI Overviews? 86 Factors and 146 Million SERPs Analyzed](https://ahrefs.com/blog/ai-overview-triggers/ "Permanent Link to What Triggers AI Overviews? 86 Factors and 146 Million SERPs Analyzed")
@@ -23,7 +33,6 @@ Ahrefs (2023 - present)
 - [Google’s Free SEO Tools, Explained](https://ahrefs.com/blog/google-seo-tools-explained/ "Permanent Link to Google’s Free SEO Tools, Explained")
 - [Goodbye, Featured Snippets: How SERP Features Have Evolved in the AI Era](https://ahrefs.com/blog/how-serp-features-have-evolved-in-the-ai-era/ "Permanent Link to Goodbye, Featured Snippets: How SERP Features Have Evolved in the AI Era")
 - [How to Persuade Your Boss to Send You to Ahrefs Evolve in San Diego](https://ahrefs.com/blog/how-to-persuade-your-boss-to-send-you-to-ahrefs-evolve/ "Permanent Link to How to Persuade Your Boss to Send You to Ahrefs Evolve in San Diego")
-- [6 Content Marketing Conferences to Attend in 2025](https://ahrefs.com/blog/content-marketing-conferences/ "Permanent Link to 6 Content Marketing Conferences to Attend in 2025")
 - [The 8 Best AI Detectors, Tested and Compared](https://ahrefs.com/blog/best-ai-detectors-tested/ "Permanent Link to The 8 Best AI Detectors, Tested and Compared")
 - [AI Content Is 4.7x Cheaper Than Human Content [+ New Research Report]](https://ahrefs.com/blog/ai-content-is-5x-cheaper-than-human-content/ "Permanent Link to AI Content Is 4.7x Cheaper Than Human Content [+ New Research Report]")
 - [The Great Decoupling (or Why Your Clicks Are Down and Impressions Up)](https://ahrefs.com/blog/the-great-decoupling/ "Permanent Link to The Great Decoupling (or Why Your Clicks Are Down and Impressions Up)")
@@ -57,10 +66,8 @@ Ahrefs (2023 - present)
 - [The Default Blocklist: Why Google Trusts Big Brands (But Not You)](https://ahrefs.com/blog/the-default-blocklist/)
 - [Can You Spot Google Updates with XmR Charts?](https://ahrefs.com/blog/can-you-spot-google-updates-with-xmr-charts/)
 - [Healthcare SEO: 7 Strategies From Medical SEO Pros](https://ahrefs.com/blog/healthcare-seo/)
-- [How to Persuade Your Boss to Send You to Ahrefs Evolve](https://ahrefs.com/blog/how-to-persuade-your-boss-to-send-you-to-ahrefs-evolve/)
 - [14 Ways to Use AI for Better, Faster SEO](https://ahrefs.com/blog/ai-seo/)
 - [Why Big Companies Make Bad Content](https://ahrefs.com/blog/why-big-companies-make-bad-content/)
-- [7 Content Marketing Conferences to Attend in 2024](https://ahrefs.com/blog/content-marketing-conferences/)
 - [Content Pruning: Why It Works, and How to Do It](https://ahrefs.com/blog/content-pruning/)
 - [How To Stand Out in an Ocean of AI Content](https://ahrefs.com/blog/how-to-stand-out-from-ai-content/)
 - [Content Marketing ROI: How to Put a $ Value on Your Content](https://ahrefs.com/blog/content-marketing-roi/)
@@ -310,7 +317,7 @@ Kapost (2014 - 2015)
 - [10 B2B Businesses School Us in Long-Form Content Marketing](https://uplandsoftware.com/kapost/resources/blog/long-form-content-marketing/)
     
 
-### **Videos**
+### Videos
 
 - [Digital Marketing Expert vs ChatGPT: Who Will Win?](https://www.youtube.com/watch?v=QbBHLuxwc4I) (Ahrefs) ⭐
 - [Debunking 11 Common Digital Marketing Myths You Thought Were True](https://www.youtube.com/watch?v=hIE9ckHT2NE) (Ahrefs)
@@ -327,8 +334,9 @@ Kapost (2014 - 2015)
 - [Blog Roast #11 — A Day in the Life of a First Finance Hire](https://www.youtube.com/watch?v=X2jnv2Dz0q4)
 - [Blog Roast #12 — Teardowns, Dynamic Content, Insane UX](https://www.youtube.com/watch?v=n7Z-PyW4br8)
 
-### **Talks and Webinars**
+### Talks and Webinars
 
+- [Patrick Stox vs Ryan Law - Ahrefs Use Cases Showdown](https://www.youtube.com/watch?v=f0H_7gSm5h8) (Ahrefs Tutorials)
 - [How to make more from less website traffic](https://themarketingmeetup.com/events/how-to-make-more-from-less-website-traffic/) (The Marketing Meetup)
 - [Content Marketing in the Age of AI Search: How to Earn Visibility in LLMs](https://contentmarketinginstitute.com/ai-content-creation-tools/content-marketing-in-the-age-of-ai) (Content Marketing Institute)
 - [Ryan Law: How To Defend Your Marketing Career in the AI Era — Ahrefs Evolve 2025](https://www.youtube.com/watch?v=VAmWkmsKY1I&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AahBNIHCQmRCgGHKiGM7w%3D%3D) (Ahrefs Evolve)
@@ -344,11 +352,13 @@ Kapost (2014 - 2015)
 - [How AI Can Make Content Better (And Much, Much Worse)](https://www.youtube.com/watch?v=tEm4WhVc9io) (Clearscope) ⭐
     
 
-### **Podcasts**
+### Podcasts
 
 As guest
 
-- [AI Is Replacing Marketers — Here’s the 6-Step Plan to Survive — Ryan Law](https://www.youtube.com/watch?v=tgIEVcGE7zI&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AYB") (Ahrefs Podcast)
+- [How to automate blog writing with AI from keyword to published | Ryan Law (Ahrefs)](https://www.youtube.com/watch?v=iVZrVeESnFQ) (Ahrefs Podcast)
+- [Why the Golden Era of Content is Over: Ryan Law, Director of Content Marketing at Ahrefs](https://www.youtube.com/watch?v=k3KHYsgNYzU) (Get Discovered by Prerender.io)
+- [AI Is Replacing Marketers — Here’s the 6-Step Plan to Survive — Ryan Law](https://www.youtube.com/watch?v=tgIEVcGE7zI) (Ahrefs Podcast)
 - [AI Writing at Scale: Ahrefs’ Step-by-Step Workflow — Ryan Law (Ahrefs)](https://www.youtube.com/watch?v=D7LBx8RFOcQ&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AYL)  (Ahrefs Podcast)
 - [How to Win in AI Search (Real Data, No Hype) — Ryan Law (Ahrefs)](https://www.youtube.com/watch?v=mL1W1SMtTT4&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AatEQ%3D%3D) (Ahrefs Podcast)
 - [Crafting Data-Driven Content in the Age of AI with Ryan Law, Ahrefs](https://www.youtube.com/watch?v=vsCmaHL5C7k&pp=ygUPcnlhbiBsYXcgYWhyZWZz2AaxCQ%3D%3D) (AudiencePlus)
