@@ -67,7 +67,9 @@ layout: default
       {% endif %}
 
       {% if is_poem %}
-        {{ page.content | newline_to_br }}
+        <div class="poem-entry{% if page.poem_art %} poem-entry--with-art{% endif %}"{% if page.poem_art %} style="--poem-art-image: url('{{ page.poem_art | relative_url }}');"{% endif %}>
+          {{ page.content | newline_to_br }}
+        </div>
       {% else %}
         {{ content }}
       {% endif %}
