@@ -4,7 +4,9 @@ title: Poems
 permalink: /poems/
 ---
 # Poems
-A collection of simple poems.
+Occasional poetry, usually haikus. I love spending time in nature and trying to capture small fragments of the experience, either in writing or in [[photos]].
+
+Abstract watercolour backgrounds for each poem are generated automatically when the poem is published, using the poem's contents as inspiration for the colour palette and generation.
 
 <hr>
 {% assign all_poems = site.poems | sort: "publish_date" | reverse %}

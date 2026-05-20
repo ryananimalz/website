@@ -7,7 +7,7 @@ permalink: lbow
 Inspired by [Andy Crestodina](https://www.linkedin.com/posts/andycrestodina_one-trick-for-staying-motivated-and-organized-activity-7072175795309350912-T-8b/), this is a running list of my podcast appearances, webinars, talks, videos, and bylined articles (excluding many hundreds of ghostwritten articles for customers). LBOW stands for *lifetime body of work*.
 
 This page is curated for personal use, but you may find the most recent links helpful too.
-
+<hr>
 ## Articles
 Ahrefs (2023 - present)
 

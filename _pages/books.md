@@ -8,7 +8,7 @@ permalink: /books
 I’m the author of two novels about the end of the world. If you’re a fan of science fiction, fantasy or post-apocalyptic fiction, you might enjoy _The Green Priest_ and its sequel, _The Death-Marked Pilgrim_. [Available now at Amazon](https://www.amazon.com/Green-Priest-Book-Rainmaker-Writings-ebook/dp/B081LHQHNJ/).
 
 <br>
-
+<hr>
 ## The Green Priest
 [Amazon.com](https://www.amazon.com/Green-Priest-Book-Rainmaker-Writings-ebook/dp/B081LHQHNJ/) | [Amazon.co.uk](https://www.amazon.co.uk/Green-Priest-Book-Rainmaker-Writings-ebook/dp/B081LHQHNJ/)
 
@@ -22,7 +22,7 @@ But at the edge of every tale can be found rumours, whispers and nightmares of t
 When a young hunter called Halvar discovers a curious artefact of the ancients, the Priests are spurred to action. For the people of Shelter have stumbled dangerously close to a truth that will reshape the world. And now, the rainmakers have arrived.
 
 <br>
-
+<hr>
 ## The Death-Marked Pilgrim
 [Amazon.com](https://www.amazon.com/dp/B09NDPN8TM/) | [Amazon.co.uk](https://www.amazon.co.uk/dp/B09NDPN8TM/)
 
