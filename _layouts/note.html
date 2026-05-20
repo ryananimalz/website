@@ -67,7 +67,19 @@ layout: default
       {% endif %}
 
       {% if is_poem %}
-        <div class="poem-entry{% if page.poem_art %} poem-entry--with-art{% endif %}"{% if page.poem_art %} style="--poem-art-image: url('{{ page.poem_art | relative_url }}');"{% endif %}>
+        <div class="poem-entry{% if page.poem_art %} poem-entry--with-art{% endif %}">
+          {% if page.poem_art %}
+            <img
+              class="poem-entry-art"
+              src="{{ page.poem_art | relative_url }}"
+              alt=""
+              aria-hidden="true"
+              width="1774"
+              height="887"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
+          {% endif %}
           {{ page.content | newline_to_br }}
         </div>
       {% else %}

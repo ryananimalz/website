@@ -19,6 +19,10 @@
 
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 
+  {% if page.poem_art %}
+  <link rel="preload" as="image" href="{{ page.poem_art | relative_url }}" fetchpriority="high">
+  {% endif %}
+
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"/>
   {% else %}

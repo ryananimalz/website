@@ -1195,6 +1195,11 @@ blockquote {
   margin: 1.4rem 0 2rem;
 }
 
+.poem-entry > :not(.poem-entry-art) {
+  position: relative;
+  z-index: 1;
+}
+
 .poem-entry > :last-child {
   margin-bottom: 0;
 }
@@ -1204,36 +1209,36 @@ blockquote {
   padding: 1.15rem 1.35rem 1.25rem 0.9rem;
 }
 
-.poem-entry--with-art::before {
-  content: "";
+.poem-entry-art {
   position: absolute;
   inset: -0.55rem -1rem -0.7rem -0.85rem;
-  z-index: -1;
+  z-index: 0;
+  width: auto;
+  min-width: calc(100% + 1.85rem);
+  height: calc(100% + 1.25rem);
+  object-fit: cover;
+  object-position: left 72%;
   pointer-events: none;
   mix-blend-mode: multiply;
-  background-image:
-    linear-gradient(180deg, rgba(250, 246, 236, 0.5), rgba(250, 246, 236, 0.08) 45%, rgba(250, 246, 236, 0.02) 100%),
-    radial-gradient(circle at 72% 18%, rgba(250, 246, 236, 0.36), transparent 24%),
-    radial-gradient(circle at 18% 82%, rgba(250, 246, 236, 0.16), transparent 28%),
-    var(--poem-art-image);
-  background-position:
-    center,
-    72% 18%,
-    18% 82%,
-    left 72%;
-  background-size:
-    100% 100%,
-    auto,
-    auto,
-    118% auto;
-  background-repeat: no-repeat;
   opacity: 0.26;
   filter: saturate(0.96) contrast(1.02);
   mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.48) 18%, black 38%, black 86%, transparent 100%);
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.48) 18%, black 38%, black 86%, transparent 100%);
 }
 
-html[data-theme="dark"] .poem-entry--with-art::before {
+.poem-entry--with-art::before {
+  content: "";
+  position: absolute;
+  inset: -0.55rem -1rem -0.7rem -0.85rem;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(250, 246, 236, 0.5), rgba(250, 246, 236, 0.08) 45%, rgba(250, 246, 236, 0.02) 100%),
+    radial-gradient(circle at 72% 18%, rgba(250, 246, 236, 0.36), transparent 24%),
+    radial-gradient(circle at 18% 82%, rgba(250, 246, 236, 0.16), transparent 28%);
+}
+
+html[data-theme="dark"] .poem-entry-art {
   opacity: 0.18;
   filter: brightness(0.82) saturate(0.9);
 }
@@ -1243,22 +1248,19 @@ html[data-theme="dark"] .poem-entry--with-art::before {
     padding: 0.95rem 0.85rem 1rem 0.55rem;
   }
 
+  .poem-entry-art,
   .poem-entry--with-art::before {
     inset: -0.35rem -0.45rem -0.45rem -0.35rem;
-    opacity: 0.22;
-    background-position:
-      center,
-      76% 16%,
-      16% 82%,
-      left 68%;
-    background-size:
-      100% 100%,
-      auto,
-      auto,
-      150% auto;
   }
 
-  html[data-theme="dark"] .poem-entry--with-art::before {
+  .poem-entry-art {
+    opacity: 0.22;
+    min-width: calc(100% + 0.8rem);
+    height: calc(100% + 0.8rem);
+    object-position: left 68%;
+  }
+
+  html[data-theme="dark"] .poem-entry-art {
     opacity: 0.16;
   }
 }
@@ -1719,7 +1721,7 @@ html body content .home-photo-feature .home-photo-frame img {
 
   .home-hero .about-photo {
     width: min(100%, 22rem);
-    margin-top: 0.35rem;
+    margin-top: 0.9rem;
   }
 
   .home-photo-feature-link,

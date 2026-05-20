@@ -3,7 +3,7 @@ title: ribs of fallen ash
 publish_date: 2026-03-30
 marginalia:
 published: true
-poem_art: /assets/poems/ribs-of-fallen-ash-abstract-v1.png
+poem_art: /assets/poems/ribs-of-fallen-ash-abstract-v1.webp
 "":
 ---
 ribs of fallen ash
