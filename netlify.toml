@@ -3,6 +3,18 @@
   publish = "_site"
 
 [[redirects]]
+  from = "/about"
+  to = "/#about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about/"
+  to = "/#about"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://lustrous-cassata-fdcb66.netlify.app/*"
   to = "https://ryanlaw.me/:splat"
   status = 301

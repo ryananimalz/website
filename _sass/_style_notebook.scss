@@ -1390,9 +1390,7 @@ html[data-theme="dark"] .home-card::before {
 }
 
 .home-hero-top {
-  display: flex;
-  gap: 1.25rem;
-  align-items: start;
+  display: block;
 }
 
 .home-intro {
@@ -1425,20 +1423,9 @@ html[data-theme="dark"] .home-card::before {
   color: var(--color-subtext);
 }
 
-.home-portrait {
-  display: flex;
-  flex: 0 0 13rem;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.home-portrait .about-photo {
-  margin-top: 0.3rem;
-}
-
 .home-hero .about-photo {
-  float: none;
-  margin: 0;
+  float: right;
+  margin: 0.3rem 0 1rem 1.5rem;
   width: min(100%, 11.5rem);
   transform: rotate(0.8deg);
 }
@@ -1622,11 +1609,6 @@ html body content .home-photo-feature .home-photo-frame img {
 }
 
 @media (max-width: 900px) {
-  .home-hero-top {
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-
   .home-grid {
     grid-template-columns: 1fr;
     column-gap: 0;
@@ -1637,15 +1619,6 @@ html body content .home-photo-feature .home-photo-frame img {
   .home-photo-feature {
     grid-column: auto;
     grid-row: auto;
-  }
-
-  .home-portrait {
-    flex-basis: auto;
-    justify-content: flex-start;
-  }
-
-  .home-portrait .about-photo {
-    margin-top: 0;
   }
 
   .home-photo-feature-link,

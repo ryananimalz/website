@@ -6,7 +6,7 @@
 {% assign page_description = page.excerpt | default: site.description | strip_html | strip_newlines | normalize_whitespace %}
 {% assign page_type = "WebPage" %}
 {% assign page_id = page_url | append: "#webpage" %}
-{% if page.url == "/about" %}
+{% if page.url == "/about" or page.url == "/about/" %}
   {% assign page_type = "ProfilePage" %}
 {% endif %}
 {% if page.id == "home" %}
@@ -29,7 +29,7 @@
       "description": {{ person.description | jsonify }},
       "jobTitle": {{ person.job_title | jsonify }},
       "mainEntityOfPage": {
-        "@id": {{ canonical_url | append: "/about#webpage" | jsonify }}
+        "@id": {{ canonical_url | append: "/#webpage" | jsonify }}
       },
       "sameAs": {{ person.same_as | jsonify }},
       "knowsAbout": {{ person.knows_about | jsonify }},
@@ -77,7 +77,7 @@
       "description": {{ page_description | jsonify }},
       "isPartOf": {
         "@id": {{ canonical_url | append: "/#website" | jsonify }}
-      }{% if page.url == "/about" %},
+      }{% if page.url == "/about" or page.url == "/about/" %},
       "mainEntity": {
         "@id": {{ person.id | jsonify }}
       }{% elsif page.url == "/" %},
