@@ -3,8 +3,8 @@ layout: page
 title: Notes
 permalink: /notes/
 ---
-<div id="notes-entry-container">
-  <content>
+<div id="notes-entry-container" class="content-with-side-panel">
+  <content class="content-with-side-panel__content">
     <h1>Notes</h1>
     <p>Personal thoughts and reflections. This is a living body of ideas that I refine and tinker with over time (many of these notes are much older than their publish date suggests). They are primarily notes to myself, but you may find them interesting too.</p>
 
@@ -18,7 +18,7 @@ permalink: /notes/
     {% endfor %}
   </content>
 
-  <side class="side-panel" aria-label="Marginalia">
+  <side class="side-panel content-with-side-panel__side" aria-label="Marginalia">
     <h3 class="side-panel-title">Marginalia</h3>
     <div class="side-panel-items">
       <div class="backlink-box side-panel-item">

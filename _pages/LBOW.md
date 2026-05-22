@@ -3,12 +3,14 @@ layout: page
 title: LBOW
 permalink: lbow
 ---
+<div class="content-with-side-panel content-with-side-panel--lead-side">
+<div class="content-with-side-panel__content" markdown="1">
 # LBOW
 Inspired by [Andy Crestodina](https://www.linkedin.com/posts/andycrestodina_one-trick-for-staying-motivated-and-organized-activity-7072175795309350912-T-8b/), this is a running list of my podcast appearances, webinars, talks, videos, and bylined articles (excluding many hundreds of ghostwritten articles for customers). LBOW stands for *lifetime body of work*.
 
 This page is curated for personal use, but you may find the most recent links helpful too.
 <hr>
-## Articles
+## Articles {#articles}
 Ahrefs (2023 - present)
 
 - [On-Page AEO: 4 Writing Frameworks for Better AI Visibility](https://ahrefs.com/blog/on-page-aeo/)
@@ -317,7 +319,7 @@ Kapost (2014 - 2015)
 - [10 B2B Businesses School Us in Long-Form Content Marketing](https://uplandsoftware.com/kapost/resources/blog/long-form-content-marketing/)
     
 
-### Videos
+### Videos {#videos}
 
 - [Digital Marketing Expert vs ChatGPT: Who Will Win?](https://www.youtube.com/watch?v=QbBHLuxwc4I) (Ahrefs) ⭐
 - [Debunking 11 Common Digital Marketing Myths You Thought Were True](https://www.youtube.com/watch?v=hIE9ckHT2NE) (Ahrefs)
@@ -334,7 +336,7 @@ Kapost (2014 - 2015)
 - [Blog Roast #11 — A Day in the Life of a First Finance Hire](https://www.youtube.com/watch?v=X2jnv2Dz0q4)
 - [Blog Roast #12 — Teardowns, Dynamic Content, Insane UX](https://www.youtube.com/watch?v=n7Z-PyW4br8)
 
-### Talks and Webinars
+### Talks and webinars {#talks-and-webinars}
 
 - [Patrick Stox vs Ryan Law - Ahrefs Use Cases Showdown](https://www.youtube.com/watch?v=f0H_7gSm5h8) (Ahrefs Tutorials)
 - [How to make more from less website traffic](https://themarketingmeetup.com/events/how-to-make-more-from-less-website-traffic/) (The Marketing Meetup)
@@ -352,7 +354,7 @@ Kapost (2014 - 2015)
 - [How AI Can Make Content Better (And Much, Much Worse)](https://www.youtube.com/watch?v=tEm4WhVc9io) (Clearscope) ⭐
     
 
-### Podcasts
+### Podcasts {#podcasts}
 
 As guest
 
@@ -405,7 +407,7 @@ As host
 - [The Content Growth Cycle — Episode 5](https://www.animalz.co/blog/episode-5-the-content-growth-cycle/)
     
 
-### Tweetstorms
+### Tweetstorms {#tweetstorms}
 
 - [15 principles of (great) content marketing](https://twitter.com/thinking_slow/status/1445707866367664131)
 - [if i was starting my career over, here are 12 things i would do to land my first job](https://twitter.com/thinking_slow/status/1484101837703847938)
@@ -415,4 +417,27 @@ As host
 - [how to write better SEO content](https://twitter.com/thinking_slow/status/1489281011770966018)
 - [6 instant writing tips](https://twitter.com/thinking_slow/status/1506968331236040708)
 - [most listicles are written by armchair commentators](https://twitter.com/thinking_slow/status/1506572832012222465)
-    
+
+</div>
+
+<side class="side-panel side-panel--page-nav content-with-side-panel__side" aria-label="Page jump navigation">
+  <h3 class="side-panel-title">On this page</h3>
+  <div class="side-panel-items">
+    <div class="backlink-box side-panel-item">
+      <a class="internal-link" href="#articles">Articles</a>
+    </div>
+    <div class="backlink-box side-panel-item">
+      <a class="internal-link" href="#videos">Videos</a>
+    </div>
+    <div class="backlink-box side-panel-item">
+      <a class="internal-link" href="#talks-and-webinars">Talks and webinars</a>
+    </div>
+    <div class="backlink-box side-panel-item">
+      <a class="internal-link" href="#podcasts">Podcasts</a>
+    </div>
+    <div class="backlink-box side-panel-item">
+      <a class="internal-link" href="#tweetstorms">Tweetstorms</a>
+    </div>
+  </div>
+</side>
+</div>

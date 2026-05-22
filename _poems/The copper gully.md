@@ -1,5 +1,5 @@
 ---
-title: The copper gully
+title: The Copper Gully
 publish_date: 2026-03-30
 marginalia: Written over several days on holiday in a forest in Spring.
 published: true
