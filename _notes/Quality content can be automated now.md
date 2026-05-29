@@ -6,7 +6,7 @@ marginalia: "This note received long-form treatment on the Ahrefs blog: https://
 ---
 Pretty soon most technology companies will fully automate content creation, and it will be indistinguishable from all the human-written content they have produced in previous years.
 
-(People who disagree with this tend to a) under-value the current capabilities of generative AI and b) over-value the quality of the average company's marketing)
+(People who disagree with this tend to a) [[Don't drive the car at walking speed|under-value the current capabilities of generative AI]] and b) over-value the quality of the average company's marketing)
 
 Many of the limitations that have prevented "quality" content automation are eroding. It's now easier for non-technical people to:
 
