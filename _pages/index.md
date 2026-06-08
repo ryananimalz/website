@@ -26,6 +26,37 @@ permalink: /
     </div>
   </section>
 
+  <section class="home-courses" aria-labelledby="courses">
+    <hr>
+    <div class="home-courses-header">
+      <h2 id="courses">Courses</h2>
+      <p>I've created two self-paced video courses helping you to master the hardest parts of modern content marketing. Many of my AI workflows and skills are built on these course materials.</p>
+    </div>
+    <div class="course-gallery" aria-label="Content marketing courses">
+      <article class="course-card">
+        <a class="course-card-image-link no-preview" href="https://courses.ryanlaw.me/how-to-edit" aria-label="How to Edit">
+          <img src="{{ site.baseurl }}/assets/course-how-to-edit.jpg" alt="How to Edit course hero image" width="3840" height="2160" loading="eager" decoding="async">
+        </a>
+        <div class="course-card-body">
+          <p class="course-card-meta">30 lessons</p>
+          <h3><a href="https://courses.ryanlaw.me/how-to-edit">How to Edit</a></h3>
+          <p>Learn editing and self-editing through concrete principles for improving idea structure, individual sentences and paragraphs, editorial processes, and your judgment as a writer or editor.</p>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <a class="course-card-image-link no-preview" href="https://courses.ryanlaw.me/how-to-write-thought-leadership-content" aria-label="How to Write Thought Leadership Content">
+          <img src="{{ site.baseurl }}/assets/course-thought-leadership.png" alt="How to Write Thought Leadership Content course hero image" width="1920" height="1080" loading="eager" decoding="async">
+        </a>
+        <div class="course-card-body">
+          <p class="course-card-meta">41 lessons</p>
+          <h3><a href="https://courses.ryanlaw.me/how-to-write-thought-leadership-content">How to Write Thought Leadership Content</a></h3>
+          <p>Build original thought leadership with frameworks for ideation, techniques for credible and persuasive writing, memorable examples, and tactics for distributing your ideas.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="home-about" aria-labelledby="gallery">
     <hr>
     <h2 class="about-gallery-heading" id="gallery">Gallery</h2>
