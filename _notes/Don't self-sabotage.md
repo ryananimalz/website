@@ -3,7 +3,7 @@ title: Don't self-sabotage
 publish_date: 2026-06-09
 published: true
 ---
-When I was younger, I deleted most of the things I made in fits of dissatisfaction. I wish I had been kinder to myself, allowed myself some distance from my creations, and seen the value that was hiding beneath their imperfections and mistakes.
+When I was younger, I deleted most of the things I made in fits of dissatisfaction. I undid huge amounts of time and effort with a single frustrated press of the "delete" key. I wish I had been kinder to myself, allowed myself some distance from my creations, and seen the value that was hiding beneath their imperfections and mistakes.
 
 Work helped me kick this habit. In my personal life, I was free to self-sabotage and delete my passion projects in fits of dissatisfaction. But at work, I had to deliver and see my projects through to the end, even if they fell short of my aspirations. And something I realised, eventually: my customers were usually delighted with the work I had wanted to delete.
 
