@@ -25,8 +25,7 @@ permalink: /
       </div>
     </div>
   </section>
-
-  <hr>
+  <hr class="home-bio-divider">
   {% if latest_note %}
     <article class="home-latest-promo">
       <p class="latest-note-label">Latest note</p>
