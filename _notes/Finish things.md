@@ -7,7 +7,7 @@ The most important thing you can do in work and life is to build a habit of fini
 
 It's easy to derail yourself and [[Do it scared|lose confidence]] when projects are halfway done. [[Embrace unevenness|Your motivation ebbs]], you encounter greater friction than expected, you find yourself drawn to something with greater promise.
 
-But there are no rewards for ideas that could have been, for projects that languish in your drafts folder. Inversely, there are a great many rewards for finished projects, even those that failed to live up to their original vision.
+But there are no rewards for ideas that could have been, for projects that [[Don't self-sabotage|languish in your drafts folder]]. Inversely, there are a great many rewards for finished projects, even those that failed to live up to their original vision.
 
 When you finish things, you develop experience through the full range of motion, gaining exposure to the messy middle and final resolution of your projects, and not simply strengthening your already over-strengthened faculties for brainstorming and aspiration.
 

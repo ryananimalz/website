@@ -6,6 +6,8 @@ This is a list of inspiring personal websites. Many of these websites are minima
 
 - [Stephan Ango](https://stephanango.com/)
 - [Jimmy Daly](https://www.jimmydaly.com/)
+- [Patrick Stox](https://patrickstox.com/)
+- [Joshua Hardwick](https://joshy.digital/)
 - [Paul Graham](http://www.paulgraham.com/)
 - [Simon Willison](https://simonwillison.net/)
 - [Wes Kao](https://www.weskao.com/)
@@ -34,3 +36,4 @@ This is a list of inspiring personal websites. Many of these websites are minima
 - [John Mueller](https://johnmu.com/)
 - [Emmanuel Quartey](https://www.quartey.com/)
 - [Brian Lovin](https://brianlovin.com/)
+- [Joshua Callandret](https://www.callandret.com/)

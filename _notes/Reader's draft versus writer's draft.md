@@ -6,7 +6,7 @@ Most writers build gradually to the point they want to make. This has the undesi
 
 Good writing achieves the opposite, opening with the [[BLUF (bottom line up front)|clearest possible articulation of an idea]] and relegating the nice-to-haves, the elaboration and examples, to the latter sections of the article.
 
-It may be that this mental scaffolding is required for the author to reach the best articulation of their idea. But it is rarely necessary for the reader. You will be surprised at how much of this scaffolding can be removed without hindering the article. Taking a lesson from fiction writing, from the book *Scene & Structure*:
+It may be that this mental scaffolding is required for the author to reach the best articulation of their idea. [[Don't self-sabotage|Keep the scaffolding long enough to learn from it]], but remember that it is rarely necessary for the reader. You will be surprised at how much of this scaffolding can be removed without hindering the article. Taking a lesson from fiction writing, from the book *Scene & Structure*:
 
 > "Novels that move too slowly outnumber those that move too fast by a margin of about ten to one."
 
