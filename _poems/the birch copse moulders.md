@@ -8,4 +8,4 @@ poem_art: /assets/poems/the-birch-copse-moulders-abstract-v1.webp
 ---
 the birch copse moulders
 slowly into humus—rich
-with garlic underfoot.
+with garlic underfoot

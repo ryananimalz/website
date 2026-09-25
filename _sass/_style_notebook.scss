@@ -1209,6 +1209,18 @@ blockquote {
   margin-bottom: 0;
 }
 
+.poem-entry > br {
+  display: none;
+}
+
+.poem-entry > p {
+  margin: 0;
+}
+
+.poem-entry > p + br + br + p {
+  margin-top: 1.1em;
+}
+
 .poem-entry--with-art {
   isolation: isolate;
   padding: 1.15rem 1.35rem 1.25rem 0.9rem;
